@@ -26,14 +26,14 @@ Explore the current version of our website through the following link:
 
 [Visit ShadowMods Website](https://shadowmods1.github.io/)
 
-## Connect With Us
+## How To Support Me
 
-Feel free to connect with us through the following channels:
+We welcome contributions to enhance and expand our project. To contribute:
 
-- **YouTube**: [ShadowMods YouTube Channel](https://www.youtube.com/@shadowmods01/)
-- **Snapchat**: [Add me on SnapChat!](https://www.snapchat.com/add/theogmarklane/)
-- **Instagram**: [My Instagram Page](https://www.instagram.com/5hadow_pho3nix/)
-- **Email**: [Email Me!](mailto:mark.lane001@icloud.com)
+- **Subscribe To My YouTube**: [ShadowMods YouTube Channel](https://www.youtube.com/@shadowmods01/)
+- **Add Me On Snapchat**: [Add me on SnapChat!](https://www.snapchat.com/add/theogmarklane/)
+- **Follow Me On Instagram**: [My Instagram Page](https://www.instagram.com/5hadow_pho3nix/)
+- **Email Me For Support Or Questions**: [Email Me!](mailto:mark.lane001@icloud.com)
 
 ## Community and Support
 
