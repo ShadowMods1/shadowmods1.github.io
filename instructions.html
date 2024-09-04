@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Repository Instructions</title>
+    <title>Instructions - ShadowMods</title>
     <link rel="icon" href="https://i.postimg.cc/DyQKQjpR/Tailor-Brands-Real-People-Creating-Real-Businesses-removebg-preview.png" type="image/x-icon">
     <style>
         body {
@@ -57,18 +57,30 @@
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
             border: 1px solid #333;
         }
-        h1, h2 {
+        h1 {
             color: #ff3333;
-            font-size: 28px;
+            font-size: 32px;
             font-weight: 700;
             margin-bottom: 20px;
             border-bottom: 2px solid #ff3333;
             padding-bottom: 10px;
         }
+        h2 {
+            color: #ff3333;
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
         p {
             font-size: 18px;
             line-height: 1.6;
             margin-bottom: 30px;
+        }
+        ul, ol {
+            margin: 20px 0;
+            padding-left: 20px;
+            font-size: 18px;
+            line-height: 1.6;
         }
         a {
             color: #ff3333;
@@ -85,20 +97,18 @@
             color: #fff;
             background-color: #ff3333;
         }
-        ol {
-            margin: 20px 0;
-            padding-left: 20px;
-            font-size: 18px;
-            line-height: 1.6;
-        }
         footer {
             background-color: #660000;
             color: #fff;
             text-align: center;
             padding: 15px;
-            position: fixed;
-            width: 100%;
+            position: absolute;
             bottom: 0;
+            width: 100%;
+            display: none;
+        }
+        .show-footer {
+            display: block;
         }
     </style>
 </head>
@@ -112,27 +122,45 @@
     </header>
     
     <div class="container">
-        <h2>Access the Repository</h2>
-        <p>To view the repositories, click the button below:</p>
-        <a href="https://github.com/ShadowMods1?tab=repositories" target="_blank">Visit Repositories on GitHub</a>
+        <h1>Instructions for Using Script Runner Pro</h1>
+        <p>Follow these steps to download and use Script Runner Pro from the webstore:</p>
 
-        <h2>Download the Roblox Cookie Logger Script</h2>
-        <p>You can download the script directly from the following link:</p>
-        <a href="https://raw.githubusercontent.com/roblox-01/roblox-script/main/script" target="_blank">Download Script</a>
+        <h2>1. Download Script Runner Pro</h2>
+        <p>Visit the [Webstore](https://chrome.google.com/webstore/detail/script-runner-pro/) to download Script Runner Pro.</p>
 
-        <h2>How to Download and Use Script Runner Pro</h2>
-        <ol>
-            <li>Go to the <a href="https://webstore.example.com/script-runner-pro" target="_blank">Script Runner Pro Webstore</a>.</li>
-            <li>Click on the "Download" or "Add to Browser" button to install Script Runner Pro.</li>
-            <li>Once installed, open Script Runner Pro from your browser extensions.</li>
-            <li>Click on the "Open Script" button within Script Runner Pro.</li>
-            <li>Upload the downloaded script from the previous step or paste the script URL if applicable.</li>
-            <li>Follow the on-screen instructions in Script Runner Pro to execute the script.</li>
-        </ol>
+        <h2>2. Install Script Runner Pro</h2>
+        <p>Once downloaded, follow the installation instructions provided in the webstore to add Script Runner Pro to your browser.</p>
+
+        <h2>3. Using Script Runner Pro</h2>
+        <p>Open Script Runner Pro in your browser and configure it according to the following instructions:</p>
+        <ul>
+            <li>Open Script Runner Pro.</li>
+            <li>Click on the "Add Script" button to load your script.</li>
+            <li>Paste the script code into the provided field.</li>
+            <li>Save the script and execute it as needed.</li>
+        </ul>
+        
+        <p>For additional help and community support, visit our <a href="https://github.com/ShadowMods1?tab=repositories" target="_blank">GitHub Repository</a>.</p>
+
+        <a href="index.html">Back to Home</a>
     </div>
     
-    <footer>
+    <footer id="footer">
         <p>&copy; 2024 ShadowMods</p>
     </footer>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            var footer = document.getElementById('footer');
+            var scrollPosition = window.innerHeight + window.scrollY;
+            var bodyHeight = document.body.offsetHeight;
+
+            if (scrollPosition >= bodyHeight) {
+                footer.classList.add('show-footer');
+            } else {
+                footer.classList.remove('show-footer');
+            }
+        });
+    </script>
 </body>
 </html>
