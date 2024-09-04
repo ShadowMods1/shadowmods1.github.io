@@ -8,7 +8,7 @@ Our website serves as a hub for all the tools, guides, and support you need for 
 
 ### Homepage
 
-The [homepage](https://shadowmods1.github.io/) provides an overview of what ShadowMods has to offer, including exclusive cheats, expert advice, giveaways, and a secure environment for all your gaming needs.
+The [homepage]([https://shadowmods1.github.io/](https://shadowmods1.github.io/index.html)) provides an overview of what ShadowMods has to offer, including exclusive cheats, expert advice, giveaways, and a secure environment for all your gaming needs.
 
 ### Instructions Page
 
@@ -24,7 +24,7 @@ The [instructions page](https://shadowmods1.github.io/instructions.html) guides 
 
 You can view and interact with the current version of the website through the following embed:
 
-[![ShadowMods Website](https://i.postimg.cc/nrry2LPY/Designer-12.png)](https://shadowmods1.github.io/)
+[![ShadowMods Website]([https://i.postimg.cc/nrry2LPY/Designer-12.png)](https://shadowmods1.github.io/](https://shadowmods1.github.io/))
 
 ## How to Contribute
 
