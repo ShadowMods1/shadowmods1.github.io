@@ -43,7 +43,7 @@ For any questions or support, join our Discord community:
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](https://raw.githubusercontent.com/ShadowMods1/shadowmods1.github.io/main/LICENSE) file for details.
+This project is licensed under the Apache License 2.0 License. See the [LICENSE](https://raw.githubusercontent.com/ShadowMods1/shadowmods1.github.io/main/LICENSE) file for details.
 
 ---
 
