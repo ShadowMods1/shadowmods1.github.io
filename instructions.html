@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Instructions - ShadowMods</title>
-    <link rel="icon" href="https://i.postimg.cc/DyQKQjpR/Tailor-Brands-Real-People-Creating-Real-Businesses-removebg-preview.png" type="image/x-icon">
+    <link rel="icon" href="https://i.postimg.cc/nrry2LPY/Designer-12.png" type="image/x-icon">
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -15,6 +15,7 @@
             display: flex;
             flex-direction: column;
             min-height: 100vh;
+            overflow-x: hidden; /* Prevent horizontal scroll */
         }
         header {
             background: linear-gradient(90deg, #cc0000, #660000);
@@ -56,6 +57,8 @@
             border-radius: 12px;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
             border: 1px solid #333;
+            position: relative;
+            padding-bottom: 60px; /* Space for the footer */
         }
         h1 {
             color: #ff3333;
@@ -102,10 +105,11 @@
             color: #fff;
             text-align: center;
             padding: 15px;
-            position: absolute;
+            position: fixed;
             bottom: 0;
             width: 100%;
-            display: none;
+            display: none; /* Initially hidden */
+            z-index: 1000;
         }
         .show-footer {
             display: block;
@@ -126,10 +130,10 @@
         <p>Follow these steps to download and use Script Runner Pro from the webstore:</p>
 
         <h2>1. Download Script Runner Pro</h2>
-        <p>Visit the [Webstore](https://chrome.google.com/webstore/detail/script-runner-pro/) to download Script Runner Pro.</p>
+        <p>Visit the <a href="https://chrome.google.com/webstore/detail/script-runner-pro/" target="_blank">Webstore</a> to download Script Runner Pro.</p>
 
-        <h2>2. Install Script Runner Pro</h2>
-        <p>Once downloaded, follow the installation instructions provided in the webstore to add Script Runner Pro to your browser.</p>
+        <h2>2. Use any of our scripts at this GitHub Repository</h2>
+        <p>For all cheats and scripts, visit our <a href="https://github.com/ShadowMods1?tab=repositories" target="_blank">GitHub Repository</a>.</p>
 
         <h2>3. Using Script Runner Pro</h2>
         <p>Open Script Runner Pro in your browser and configure it according to the following instructions:</p>
@@ -139,8 +143,6 @@
             <li>Paste the script code into the provided field.</li>
             <li>Save the script and execute it as needed.</li>
         </ul>
-        
-        <p>For additional help and community support, visit our <a href="https://github.com/ShadowMods1?tab=repositories" target="_blank">GitHub Repository</a>.</p>
 
         <a href="index.html">Back to Home</a>
     </div>
@@ -153,9 +155,9 @@
         window.addEventListener('scroll', function() {
             var footer = document.getElementById('footer');
             var scrollPosition = window.innerHeight + window.scrollY;
-            var bodyHeight = document.body.offsetHeight;
+            var bodyHeight = document.body.scrollHeight;
 
-            if (scrollPosition >= bodyHeight) {
+            if (scrollPosition >= bodyHeight - 1) { // Check if user is close to the bottom
                 footer.classList.add('show-footer');
             } else {
                 footer.classList.remove('show-footer');
