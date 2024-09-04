@@ -56,6 +56,7 @@
             border-radius: 12px;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
             border: 1px solid #333;
+            flex: 1; /* Makes container grow to fill available space */
         }
         h1 {
             color: #ff3333;
@@ -102,13 +103,18 @@
             color: #fff;
             text-align: center;
             padding: 15px;
-            position: absolute;
+            position: fixed;
             bottom: 0;
             width: 100%;
             display: none;
+            transition: opacity 0.3s ease;
         }
         .show-footer {
             display: block;
+            opacity: 1;
+        }
+        .hide-footer {
+            opacity: 0;
         }
     </style>
 </head>
@@ -146,7 +152,7 @@
         <p>Join <a href="https://discord.gg/FnGse6AvNR" class="discord-link" target="_blank">ShadowMods</a> today and take your gaming to the next level!</p>
     </div>
     
-    <footer id="footer">
+    <footer id="footer" class="hide-footer">
         <p>&copy; 2024 ShadowMods</p>
     </footer>
 
@@ -158,8 +164,10 @@
 
             if (scrollPosition >= bodyHeight) {
                 footer.classList.add('show-footer');
+                footer.classList.remove('hide-footer');
             } else {
                 footer.classList.remove('show-footer');
+                footer.classList.add('hide-footer');
             }
         });
     </script>
