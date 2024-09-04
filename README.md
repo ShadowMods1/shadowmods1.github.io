@@ -26,16 +26,14 @@ Explore the current version of our website through the following link:
 
 [Visit ShadowMods Website](https://shadowmods1.github.io/)
 
-## How to Contribute
+## Connect With Us
 
-We welcome contributions to enhance and expand our project. To contribute:
+Feel free to connect with us through the following channels:
 
-1. **Fork** the repository.
-2. **Create** a new branch (`git checkout -b feature/YourFeature`).
-3. **Make** your changes.
-4. **Commit** your changes (`git commit -am 'Add new feature'`).
-5. **Push** to the branch (`git push origin feature/YourFeature`).
-6. **Create** a Pull Request.
+- **YouTube**: [ShadowMods YouTube Channel](https://www.youtube.com/@shadowmods01/)
+- **Snapchat**: [@YourSnapchatUsername](https://www.snapchat.com/add/theogmarklane/)
+- **Instagram**: [@YourInstagramHandle](https://www.instagram.com/5hadow_pho3nix/)
+- **Email**: [your.email@example.com](mailto:mark.lane001@icloud.com)
 
 ## Community and Support
 
