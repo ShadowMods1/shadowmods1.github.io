@@ -57,7 +57,7 @@
             border-radius: 12px;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
             border: 1px solid #333;
-            position: relative;
+            flex: 1; /* Makes container grow to fill available space */
             padding-bottom: 60px; /* Space for the footer */
         }
         h1 {
@@ -110,9 +110,14 @@
             width: 100%;
             display: none; /* Initially hidden */
             z-index: 1000;
+            transition: opacity 0.3s ease;
         }
         .show-footer {
             display: block;
+            opacity: 1;
+        }
+        .hide-footer {
+            opacity: 0;
         }
     </style>
 </head>
@@ -147,7 +152,7 @@
         <a href="index.html">Back to Home</a>
     </div>
     
-    <footer id="footer">
+    <footer id="footer" class="hide-footer">
         <p>&copy; 2024 ShadowMods</p>
     </footer>
 
@@ -159,8 +164,10 @@
 
             if (scrollPosition >= bodyHeight - 1) { // Check if user is close to the bottom
                 footer.classList.add('show-footer');
+                footer.classList.remove('hide-footer');
             } else {
                 footer.classList.remove('show-footer');
+                footer.classList.add('hide-footer');
             }
         });
     </script>
