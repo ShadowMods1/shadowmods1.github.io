@@ -24,7 +24,7 @@ The [instructions page](https://shadowmods1.github.io/instructions.html) guides 
 
 You can view and interact with the current version of the website through the following embed:
 
-[![ShadowMods Website]([https://i.postimg.cc/nrry2LPY/Designer-12.png)](https://shadowmods1.github.io/](https://shadowmods1.github.io/))
+[![ShadowMods Website](https://shadowmods1.github.io/)]
 
 ## How to Contribute
 
