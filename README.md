@@ -1,48 +1,52 @@
 # ShadowMods
 
-Welcome to ShadowMods! Our mission is to provide the latest and most reliable game cheats to help you dominate the leaderboards and explore hidden features in your favorite titles. Whether you're looking for exclusive cheats, expert advice, or participating in exciting giveaways, our community has everything you need to elevate your gaming experience.
+Welcome to **ShadowMods**! We are dedicated to providing the latest and most reliable game cheats for all your favorite titles. Whether you're aiming to climb the leaderboards or uncover hidden features, we offer the resources and expertise to elevate your gaming experience.
 
-## About the Website
+## Overview
 
-Our website serves as a hub for all the tools, guides, and support you need for using our scripts and cheats. The website is designed to be user-friendly and professional, offering a clean and modern interface with a focus on usability.
+Our website serves as the central hub for accessing tools, guides, and support related to our scripts and cheats. Designed with a clean, modern interface, it ensures a professional and user-friendly experience.
 
 ### Homepage
 
-The [homepage]([https://shadowmods1.github.io/](https://shadowmods1.github.io/index.html)) provides an overview of what ShadowMods has to offer, including exclusive cheats, expert advice, giveaways, and a secure environment for all your gaming needs.
+The [**Homepage**](https://shadowmods1.github.io/) introduces ShadowMods and highlights the benefits of joining our community. It features exclusive cheats, expert advice, and exciting giveaways.
 
 ### Instructions Page
 
-The [instructions page](https://shadowmods1.github.io/instructions.html) guides you through the process of downloading and using Script Runner Pro from the webstore. This page provides step-by-step instructions on installing the extension and using it to run scripts effectively.
+The [**Instructions Page**](https://shadowmods1.github.io/instructions.html) provides a comprehensive guide on how to download and use Script Runner Pro from the webstore. It includes step-by-step instructions to help you get started and use the tool effectively.
 
-## Website Features
+## Key Features
 
-- **Professional Design**: Clean, modern, and visually appealing with a focus on user experience.
-- **Sticky Header**: Easy navigation with a sticky header that includes links to the homepage and instructions page.
-- **Dynamic Footer**: The footer appears only when you scroll to the bottom of the page, ensuring it doesn't interfere with your content view.
+- **Professional Design**: A sleek, modern interface that prioritizes ease of use and visual appeal.
+- **Sticky Header**: Provides convenient navigation with links to the homepage and instructions page.
+- **Dynamic Footer**: A footer that only appears when scrolling to the bottom of the page to ensure it does not obstruct your content view.
 
-## Embed of the Current Website
+## View Our Website
 
-You can view and interact with the current version of the website through the following embed:
+Explore the current version of our website through the following link:
 
-[![ShadowMods Website](https://shadowmods1.github.io/)]
+[Visit ShadowMods Website](https://shadowmods1.github.io/)
 
 ## How to Contribute
 
-We welcome contributions to enhance and expand our project. If you would like to contribute, please follow these steps:
+We welcome contributions to enhance and expand our project. To contribute:
 
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature/YourFeature`).
-3. Make your changes.
-4. Commit your changes (`git commit -am 'Add new feature'`).
-5. Push to the branch (`git push origin feature/YourFeature`).
-6. Create a new Pull Request.
+1. **Fork** the repository.
+2. **Create** a new branch (`git checkout -b feature/YourFeature`).
+3. **Make** your changes.
+4. **Commit** your changes (`git commit -am 'Add new feature'`).
+5. **Push** to the branch (`git push origin feature/YourFeature`).
+6. **Create** a Pull Request.
 
-## Contact Us
+## Community and Support
 
-For any questions or support, please join our Discord community: [ShadowMods Discord Server](https://discord.gg/FnGse6AvNR).
+For any questions or support, join our Discord community:
 
-Thank you for visiting ShadowMods. We hope you enjoy our resources and join our community!
+[**ShadowMods Discord Server**](https://discord.gg/FnGse6AvNR)
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](https://raw.githubusercontent.com/ShadowMods1/shadowmods1.github.io/main/LICENSE) file for details.
 
 ---
 
-&copy; 2024 ShadowMods
+&copy; 2024 **ShadowMods**
