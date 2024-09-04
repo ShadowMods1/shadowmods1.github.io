@@ -31,7 +31,7 @@ Explore the current version of our website through the following link:
 We welcome contributions to enhance and expand our project. To contribute:
 
 - **Subscribe To My YouTube**: [ShadowMods YouTube Channel](https://www.youtube.com/@shadowmods01/)
-- **Add Me On Snapchat**: [Add me on SnapChat!](https://www.snapchat.com/add/theogmarklane/)
+- **Add Me On Snapchat**: [My Snapchat!](https://www.snapchat.com/add/theogmarklane/)
 - **Follow Me On Instagram**: [My Instagram Page](https://www.instagram.com/5hadow_pho3nix/)
 - **Email Me For Support Or Questions**: [Email Me!](mailto:mark.lane001@icloud.com)
 
