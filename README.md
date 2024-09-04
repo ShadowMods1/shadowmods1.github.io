@@ -31,9 +31,9 @@ Explore the current version of our website through the following link:
 Feel free to connect with us through the following channels:
 
 - **YouTube**: [ShadowMods YouTube Channel](https://www.youtube.com/@shadowmods01/)
-- **Snapchat**: [@YourSnapchatUsername](https://www.snapchat.com/add/theogmarklane/)
-- **Instagram**: [@YourInstagramHandle](https://www.instagram.com/5hadow_pho3nix/)
-- **Email**: [your.email@example.com](mailto:mark.lane001@icloud.com)
+- **Snapchat**: [Add me on SnapChat!](https://www.snapchat.com/add/theogmarklane/)
+- **Instagram**: [My Instagram Page](https://www.instagram.com/5hadow_pho3nix/)
+- **Email**: [Email Me!](mailto:mark.lane001@icloud.com)
 
 ## Community and Support
 
