@@ -3,26 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to WebWarp Gaming</title>
+    <title>Home - WebWarp Gaming</title>
     <link rel="icon" href="https://i.postimg.cc/DyQKQjpR/Tailor-Brands-Real-People-Creating-Real-Businesses-removebg-preview.png" type="image/x-icon">
     <style>
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #1e1e2f; /* Dark navy background */
-            color: #f0f0f0; /* Light gray text */
+            background-color: #1a1a2e;
+            color: #e94560;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
-            overflow-x: hidden; /* Prevent horizontal scroll */
         }
         header {
-            background: linear-gradient(90deg, #ff4e50, #fc913a); /* Warm gradient header */
-            color: #ffffff;
-            padding: 20px 40px;
+            background: linear-gradient(90deg, #0f3460, #1a1a2e);
+            color: #fff;
+            padding: 20px;
             text-align: center;
-            font-size: 32px;
+            font-size: 28px;
             font-weight: 700;
             position: sticky;
             top: 0;
@@ -30,6 +29,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 20px 40px;
         }
         .logo {
             width: 120px;
@@ -39,97 +39,68 @@
             gap: 15px;
         }
         .nav-buttons a {
-            color: #ffffff;
+            color: #fff;
             text-decoration: none;
             font-weight: bold;
-            font-size: 18px;
+            font-size: 16px;
             transition: color 0.3s;
-            padding: 10px 15px;
-            border-radius: 5px;
-            background: rgba(255, 255, 255, 0.1);
         }
         .nav-buttons a:hover {
-            color: #ff4e50; /* Color transition */
-            background: rgba(255, 255, 255, 0.2);
+            color: #e94560;
         }
         .container {
             max-width: 900px;
             margin: 40px auto;
             padding: 30px;
-            background: rgba(255, 255, 255, 0.05); /* Slightly transparent background */
+            background: #16213e;
             border-radius: 12px;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
             border: 1px solid #333;
-            flex: 1; /* Makes container grow to fill available space */
-            padding-bottom: 60px; /* Space for the footer */
+            flex: 1;
         }
         h1 {
-            color: #ff4e50; /* Header color */
-            font-size: 32px;
+            color: #e94560;
+            font-size: 36px;
             font-weight: 700;
             margin-bottom: 20px;
+            border-bottom: 2px solid #e94560;
+            padding-bottom: 10px;
         }
         h2 {
-            color: #fc913a; /* Subheader color */
+            color: #e94560;
             font-size: 28px;
             font-weight: 700;
             margin-bottom: 15px;
         }
-        p {
+        p, ul {
             font-size: 18px;
             line-height: 1.6;
             margin-bottom: 30px;
         }
-        ul {
-            margin: 20px 0;
-            padding-left: 20px;
-            font-size: 18px;
-            line-height: 1.6;
-            list-style-type: none; /* Remove default bullets */
-        }
-        ul li {
-            background: #2e2e4d; /* Background for list items */
-            border-radius: 8px;
-            padding: 10px;
-            transition: transform 0.2s, background 0.2s;
-        }
-        ul li:hover {
-            transform: scale(1.05);
-            background: #3f3f6d; /* Darker background on hover */
-        }
         a {
-            color: #ff4e50; /* Link color */
+            color: #e94560;
             text-decoration: none;
             font-weight: bold;
             transition: color 0.3s, background-color 0.3s;
             padding: 12px 20px;
-            border: 2px solid #ff4e50; /* Border color */
+            border: 2px solid #e94560;
             border-radius: 8px;
             display: inline-block;
             margin-top: 20px;
         }
         a:hover {
-            color: #ffffff;
-            background-color: #ff4e50; /* Background color on hover */
+            color: #fff;
+            background-color: #e94560;
         }
         footer {
-            background-color: #3f3f6d; /* Footer color */
-            color: #ffffff;
+            background-color: #0f3460;
+            color: #fff;
             text-align: center;
             padding: 15px;
             position: fixed;
             bottom: 0;
             width: 100%;
-            display: none; /* Initially hidden */
-            z-index: 1000;
             transition: opacity 0.3s ease;
-        }
-        .show-footer {
-            display: block;
-            opacity: 1;
-        }
-        .hide-footer {
-            opacity: 0;
         }
     </style>
 </head>
@@ -138,44 +109,32 @@
         <img src="https://i.postimg.cc/DyQKQjpR/Tailor-Brands-Real-People-Creating-Real-Businesses-removebg-preview.png" alt="Logo" class="logo">
         <div class="nav-buttons">
             <a href="index.html">Home</a>
-            <a href="games.html">Games</a> <!-- Link to games page -->
+            <a href="games.html">Games</a>
+            <a href="community.html">Community</a>
         </div>
     </header>
-    
+
     <div class="container">
-        <h1>Welcome to WebWarp Gaming!</h1>
-        <p>Experience a world of exciting games and features designed for gamers by gamers.</p>
-
-        <h2>Why Choose Us?</h2>
+        <h1>Welcome to WebWarp Gaming</h1>
+        <p>Your ultimate destination for all things gaming! Dive into an exciting world of fun, competition, and community. Explore new games, join fellow gamers, and elevate your gaming experience.</p>
+        
+        <h2>🎮 Featured Games:</h2>
         <ul>
-            <li>📊 Explore a diverse collection of games!</li>
-            <li>🛠️ Find tools and scripts to enhance your gameplay!</li>
-            <li>🎮 Join a community of passionate gamers!</li>
-            <li>🌟 Stay updated with the latest gaming news and updates!</li>
+            <li><strong>kirk.io:</strong> Experience fast-paced battle royale gameplay.</li>
+            <li><strong>kour.io:</strong> Join thrilling multiplayer challenges.</li>
+            <li><strong>krunker.io:</strong> Engage in addictive first-person shooter action.</li>
+            <li><strong>1v1.lol:</strong> Test your skills in one-on-one combat.</li>
+            <li><strong>narrow.one:</strong> Navigate through challenging maps with friends.</li>
+            <li><strong>ship3d:</strong> Discover and build in a 3D universe.</li>
         </ul>
-
-        <h2>Get Started</h2>
-        <p>Visit our <a href="games.html">Games</a> page to explore our collection!</p>
+        
+        <h2>🤝 Join Our Discord Community:</h2>
+        <p>Connect with us on Discord to meet fellow gamers, share tips, and join in on events!</p>
+        <a href="https://discord.gg/FnGse6AvNR" target="_blank">Join Our Discord</a>
     </div>
-    
-    <footer id="footer" class="hide-footer">
+
+    <footer>
         <p>&copy; 2024 WebWarp Gaming</p>
     </footer>
-
-    <script>
-        window.addEventListener('scroll', function() {
-            var footer = document.getElementById('footer');
-            var scrollPosition = window.innerHeight + window.scrollY;
-            var bodyHeight = document.body.scrollHeight;
-
-            if (scrollPosition >= bodyHeight - 1) { // Check if user is close to the bottom
-                footer.classList.add('show-footer');
-                footer.classList.remove('hide-footer');
-            } else {
-                footer.classList.remove('show-footer');
-                footer.classList.add('hide-footer');
-            }
-        });
-    </script>
 </body>
 </html>
