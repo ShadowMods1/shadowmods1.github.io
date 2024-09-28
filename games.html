@@ -3,90 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WebWarp Gaming - Games</title>
+    <title>Games - WebWarp Gaming</title>
     <link rel="icon" href="https://i.postimg.cc/DyQKQjpR/Tailor-Brands-Real-People-Creating-Real-Businesses-removebg-preview.png" type="image/x-icon">
     <style>
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #1e1e1e;
-            color: #e0e0e0;
+            background: linear-gradient(135deg, #ff0033, #3300ff);
+            color: #ffffff;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
             overflow-x: hidden;
         }
         header {
-            background: linear-gradient(135deg, #6200ea, #3700b3);
+            background: rgba(0, 0, 0, 0.7);
             color: #fff;
             padding: 20px;
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 20px 40px;
+            border-bottom: 2px solid #ffffff;
         }
         .logo {
             width: 120px;
         }
+        .nav-buttons {
+            display: flex;
+            gap: 20px;
+        }
         .nav-buttons a {
-            color: #fff;
+            color: #ffffff;
             text-decoration: none;
             font-weight: bold;
             font-size: 18px;
-            margin-left: 15px;
             transition: color 0.3s;
+            padding: 10px 15px;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.2);
         }
         .nav-buttons a:hover {
-            color: #bb86fc;
+            background: rgba(255, 255, 255, 0.4);
         }
         .container {
             max-width: 900px;
             margin: 40px auto;
             padding: 30px;
-            background: #292929;
+            background: rgba(0, 0, 0, 0.8);
             border-radius: 12px;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
             flex: 1;
         }
         h1 {
-            color: #bb86fc;
-            font-size: 32px;
+            color: #ffcc00;
+            font-size: 36px;
+            font-weight: 700;
             margin-bottom: 20px;
+            text-align: center;
         }
         h2 {
-            color: #bb86fc;
-            font-size: 28px;
+            color: #ffcc00;
+            font-size: 30px;
+            font-weight: 600;
             margin-bottom: 15px;
         }
-        p, ul {
+        p {
             font-size: 18px;
             line-height: 1.6;
-            margin-bottom: 30px;
-            color: #e0e0e0;
+            margin-bottom: 20px;
         }
         a {
-            color: #bb86fc;
+            color: #ff0033;
             text-decoration: none;
             font-weight: bold;
-            transition: color 0.3s;
-            padding: 12px 20px;
-            border: 2px solid #bb86fc;
+            transition: color 0.3s, background-color 0.3s;
+            padding: 10px 20px;
+            border: 2px solid #ff0033;
             border-radius: 8px;
             display: inline-block;
             margin-top: 20px;
         }
         a:hover {
-            background-color: #bb86fc;
-            color: #fff;
+            color: #ffffff;
+            background-color: #ff0033;
         }
         footer {
-            background-color: #3700b3;
-            color: #fff;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #ffffff;
             text-align: center;
             padding: 15px;
             position: fixed;
             bottom: 0;
             width: 100%;
+            display: none;
+            z-index: 1000;
+            transition: opacity 0.3s ease;
+        }
+        .show-footer {
+            display: block;
+            opacity: 1;
+        }
+        .hide-footer {
+            opacity: 0;
         }
     </style>
 </head>
@@ -102,24 +128,38 @@
     </header>
     
     <div class="container">
-        <h1>Explore Our Favorite Games!</h1>
-        <p>At WebWarp Gaming, we celebrate a variety of engaging online games. Below are some of our favorites, complete with descriptions and links to play.</p>
+        <h1>Explore Our Game Collection</h1>
+        <p>Here are some of the games you can enjoy:</p>
         
-        <h2>🎮 Game List:</h2>
+        <h2>🔥 Game Features:</h2>
         <ul>
-            <li><strong><a href="https://kirka.io/" target="_blank">KIRKA.IO</a>:</strong> A dynamic battle royale game with customizable characters.</li>
-            <li><strong><a href="https://kour.io/" target="_blank">KOUR.IO</a>:</strong> Engage in fast-paced shooting and strategy.</li>
-            <li><strong><a href="https://krunker.io/" target="_blank">KRUNKER.IO</a>:</strong> A classic FPS game with multiple maps and modes.</li>
-            <li><strong><a href="https://1v1.lol/" target="_blank">1V1.LOL</a>:</strong> Compete against players in intense 1v1 battles.</li>
-            <li><strong><a href="https://narrow.one/" target="_blank">NARROW.ONE</a>:</strong> Discover an exciting world of strategic gameplay.</li>
-            <li><strong><a href="https://yp3d.com/ships3d/" target="_blank">SHIP3D</a>:</strong> Explore 3D environments and challenges.</li>
+            <li><strong>Regular Updates:</strong> Get new content and features frequently.</li>
+            <li><strong>Community Events:</strong> Participate in exciting events and contests.</li>
+            <li><strong>Cross-Platform Play:</strong> Enjoy games with friends, no matter the platform.</li>
+            <li><strong>Active Development:</strong> We're constantly improving our games based on player feedback.</li>
         </ul>
         
-        <p>Stay tuned for updates on new games and features!</p>
+        <p>Visit our <a href="https://discord.gg/FnGse6AvNR" target="_blank">Discord</a> server for game announcements and community discussions!</p>
     </div>
     
-    <footer>
+    <footer id="footer" class="hide-footer">
         <p>&copy; 2024 WebWarp Gaming</p>
     </footer>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            var footer = document.getElementById('footer');
+            var scrollPosition = window.innerHeight + window.scrollY;
+            var bodyHeight = document.body.scrollHeight;
+
+            if (scrollPosition >= bodyHeight - 1) {
+                footer.classList.add('show-footer');
+                footer.classList.remove('hide-footer');
+            } else {
+                footer.classList.remove('show-footer');
+                footer.classList.add('hide-footer');
+            }
+        });
+    </script>
 </body>
 </html>
