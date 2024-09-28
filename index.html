@@ -10,20 +10,19 @@
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #ff0033, #3300ff);
-            color: #ffffff;
+            background: linear-gradient(135deg, #ff0033, #0033ff);
+            color: #fff;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
-            overflow-x: hidden;
         }
         header {
-            background: rgba(0, 0, 0, 0.7);
+            background-color: rgba(0, 0, 0, 0.8);
             color: #fff;
             padding: 20px;
             text-align: center;
-            font-size: 28px;
-            font-weight: bold;
+            font-size: 32px;
+            font-weight: 700;
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -31,54 +30,47 @@
             justify-content: space-between;
             align-items: center;
             padding: 20px 40px;
-            border-bottom: 2px solid #ffffff;
         }
         .logo {
             width: 120px;
         }
         .nav-buttons {
             display: flex;
-            gap: 20px;
+            gap: 15px;
         }
         .nav-buttons a {
-            color: #ffffff;
+            color: #fff;
             text-decoration: none;
             font-weight: bold;
             font-size: 18px;
             transition: color 0.3s;
-            padding: 10px 15px;
-            border-radius: 5px;
-            background: rgba(255, 255, 255, 0.2);
         }
         .nav-buttons a:hover {
-            background: rgba(255, 255, 255, 0.4);
+            color: #ff3333;
         }
         .container {
             max-width: 900px;
             margin: 40px auto;
             padding: 30px;
-            background: rgba(0, 0, 0, 0.8);
+            background: rgba(255, 255, 255, 0.1);
             border-radius: 12px;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
             flex: 1;
         }
         h1 {
-            color: #ffcc00;
-            font-size: 36px;
+            color: #ff3333;
+            font-size: 32px;
             font-weight: 700;
             margin-bottom: 20px;
-            text-align: center;
+            border-bottom: 2px solid #ff3333;
+            padding-bottom: 10px;
+        }
+        p, h2 {
+            margin: 15px 0;
         }
         h2 {
-            color: #ffcc00;
-            font-size: 30px;
-            font-weight: 600;
-            margin-bottom: 15px;
-        }
-        p {
-            font-size: 18px;
-            line-height: 1.6;
-            margin-bottom: 20px;
+            font-size: 28px;
+            font-weight: 700;
         }
         ul {
             margin: 20px 0;
@@ -87,38 +79,25 @@
             line-height: 1.6;
         }
         a {
-            color: #ff0033;
+            color: #ff3333;
             text-decoration: none;
             font-weight: bold;
             transition: color 0.3s, background-color 0.3s;
-            padding: 10px 20px;
-            border: 2px solid #ff0033;
+            padding: 12px 20px;
+            border: 2px solid #ff3333;
             border-radius: 8px;
             display: inline-block;
             margin-top: 20px;
         }
         a:hover {
-            color: #ffffff;
-            background-color: #ff0033;
+            color: #fff;
+            background-color: #ff3333;
         }
         footer {
-            background-color: rgba(0, 0, 0, 0.7);
-            color: #ffffff;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
             text-align: center;
             padding: 15px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            display: none;
-            z-index: 1000;
-            transition: opacity 0.3s ease;
-        }
-        .show-footer {
-            display: block;
-            opacity: 1;
-        }
-        .hide-footer {
-            opacity: 0;
         }
     </style>
 </head>
@@ -127,47 +106,30 @@
         <img src="https://i.postimg.cc/DyQKQjpR/Tailor-Brands-Real-People-Creating-Real-Businesses-removebg-preview.png" alt="Logo" class="logo">
         <div class="nav-buttons">
             <a href="index.html">Home</a>
-            <a href="games.html">Games</a>
             <a href="discord.html">Discord</a>
-            <a href="about.html">About</a>
+            <a href="games.html">Games</a>
         </div>
     </header>
     
     <div class="container">
         <h1>Welcome to WebWarp Gaming</h1>
-        <p>Explore a variety of exciting games with our vibrant community. From fast-paced shooters to strategic battles, we have it all!</p>
+        <p>Explore the exciting world of online gaming! From tactical shooters to competitive multiplayer games, we cover a wide range of titles to keep you engaged.</p>
         
-        <h2>🎮 Featured Games:</h2>
+        <h2>Featured Games:</h2>
         <ul>
-            <li><strong>kirka.io:</strong> An intense multiplayer shooter that puts your skills to the test.</li>
-            <li><strong>kour.io:</strong> A fast-paced battle arena that challenges your strategy and reflexes.</li>
-            <li><strong>krunker.io:</strong> A browser-based FPS with customizable maps and game modes.</li>
-            <li><strong>1v1.lol:</strong> Engage in intense 1v1 battles with friends or players from around the world.</li>
-            <li><strong>narrow.one:</strong> A unique take on competitive battle royale gameplay.</li>
-            <li><strong>ship3d:</strong> Build and customize your own ships in this creative multiplayer world.</li>
+            <li>🚀 <strong>Kirka.io:</strong> A fast-paced arena shooter.</li>
+            <li>⚔️ <strong>Kour.io:</strong> Engage in epic battles with friends.</li>
+            <li>🎯 <strong>Krunker.io:</strong> A classic first-person shooter experience.</li>
+            <li>🛡️ <strong>1v1.lol:</strong> Test your skills in 1v1 battles.</li>
+            <li>🏹 <strong>Narrow.one:</strong> A unique archery battle game.</li>
+            <li>🚢 <strong>Ship3D:</strong> Experience naval combat like never before!</li>
         </ul>
 
-        <p>Join our community on <a href="https://discord.gg/FnGse6AvNR" target="_blank">Discord</a> to connect with fellow gamers and get the latest updates!</p>
+        <p>Join us on this gaming adventure and discover your new favorite games!</p>
     </div>
     
-    <footer id="footer" class="hide-footer">
+    <footer>
         <p>&copy; 2024 WebWarp Gaming</p>
     </footer>
-
-    <script>
-        window.addEventListener('scroll', function() {
-            var footer = document.getElementById('footer');
-            var scrollPosition = window.innerHeight + window.scrollY;
-            var bodyHeight = document.body.scrollHeight;
-
-            if (scrollPosition >= bodyHeight - 1) {
-                footer.classList.add('show-footer');
-                footer.classList.remove('hide-footer');
-            } else {
-                footer.classList.remove('show-footer');
-                footer.classList.add('hide-footer');
-            }
-        });
-    </script>
 </body>
 </html>
