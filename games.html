@@ -27,6 +27,9 @@
         .logo {
             width: 120px;
         }
+        .nav-buttons {
+            position: relative;
+        }
         .nav-buttons a {
             color: #fff;
             text-decoration: none;
@@ -36,6 +39,30 @@
         }
         .nav-buttons a:hover {
             color: #ffeb3b;
+        }
+        .dropdown {
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.9);
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: #fff;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #ffeb3b;
+            color: #000;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
         }
         .container {
             max-width: 900px;
@@ -75,21 +102,31 @@
         <img src="https://i.postimg.cc/DyQKQjpR/Tailor-Brands-Real-People-Creating-Real-Businesses-removebg-preview.png" alt="Logo" class="logo">
         <nav class="nav-buttons">
             <a href="index.html">Home</a>
-            <a href="games.html">Games</a>
+            <div class="dropdown">
+                <a href="games.html">Games</a>
+                <div class="dropdown-content">
+                    <a href="#kirka">Kirka.io</a>
+                    <a href="#kour">Kour.io</a>
+                    <a href="#krunker">Krunker.io</a>
+                    <a href="#1v1">1v1.lol</a>
+                    <a href="#narrow">Narrow.one</a>
+                    <a href="#ship3d">Ship3D</a>
+                </div>
+            </div>
             <a href="discord.html">Discord</a>
         </nav>
     </header>
 
     <div class="container">
-        <h1>Featured Games</h1>
-        <p>Explore some of the most exciting games available right now:</p>
+        <h1>Explore Our Favorite Games</h1>
+        <p>Welcome to the games section! Here are some of our top picks for you to try:</p>
         <ul>
-            <li><strong>Kirka.io:</strong> A fast-paced arena shooter that emphasizes skill and strategy.</li>
-            <li><strong>Kour.io:</strong> Engage in intense multiplayer battles and prove your dominance.</li>
-            <li><strong>Krunker.io:</strong> A classic FPS that brings back the nostalgia of pixelated gaming.</li>
-            <li><strong>1v1.lol:</strong> Test your building and shooting skills in a battle royale setting.</li>
-            <li><strong>Narrow.one:</strong> A unique take on the battle royale genre with a focus on archery.</li>
-            <li><strong>Ship3D:</strong> Sail through the seas in an engaging 3D naval battle experience.</li>
+            <li><strong><a href="#kirka">Kirka.io</a></strong> - A fast-paced shooter with a unique art style.</li>
+            <li><strong><a href="#kour">Kour.io</a></strong> - Team up with friends in thrilling multiplayer battles.</li>
+            <li><strong><a href="#krunker">Krunker.io</a></strong> - Enjoy classic FPS gameplay in a browser.</li>
+            <li><strong><a href="#1v1">1v1.lol</a></strong> - Challenge friends to 1v1 duels.</li>
+            <li><strong><a href="#narrow">Narrow.one</a></strong> - Test your skills in this intense battle royale.</li>
+            <li><strong><a href="#ship3d">Ship3D</a></strong> - Navigate through 3D space in this unique game.</li>
         </ul>
     </div>
 
