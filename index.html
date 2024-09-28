@@ -3,101 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - WebWarp Gaming</title>
+    <title>WebWarp Gaming</title>
     <link rel="icon" href="https://i.postimg.cc/DyQKQjpR/Tailor-Brands-Real-People-Creating-Real-Businesses-removebg-preview.png" type="image/x-icon">
     <style>
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #ff0033, #0033ff);
+            background: linear-gradient(120deg, #ff0033, #0033ff);
             color: #fff;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
         }
         header {
-            background-color: rgba(0, 0, 0, 0.8);
+            background: rgba(0, 0, 0, 0.8);
             color: #fff;
-            padding: 20px;
-            text-align: center;
-            font-size: 32px;
-            font-weight: 700;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+            padding: 20px 40px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 40px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
         .logo {
             width: 120px;
-        }
-        .nav-buttons {
-            display: flex;
-            gap: 15px;
         }
         .nav-buttons a {
             color: #fff;
             text-decoration: none;
             font-weight: bold;
             font-size: 18px;
+            margin: 0 15px;
             transition: color 0.3s;
         }
         .nav-buttons a:hover {
-            color: #ff3333;
+            color: #ffcc00;
         }
         .container {
             max-width: 900px;
             margin: 40px auto;
             padding: 30px;
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(0, 0, 0, 0.7);
             border-radius: 12px;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
             flex: 1;
         }
         h1 {
-            color: #ff3333;
-            font-size: 32px;
-            font-weight: 700;
+            color: #ffcc00;
+            font-size: 36px;
             margin-bottom: 20px;
-            border-bottom: 2px solid #ff3333;
+            border-bottom: 2px solid #ffcc00;
             padding-bottom: 10px;
         }
-        p, h2 {
-            margin: 15px 0;
-        }
         h2 {
+            color: #ffcc00;
             font-size: 28px;
-            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 30px;
         }
         ul {
             margin: 20px 0;
             padding-left: 20px;
             font-size: 18px;
-            line-height: 1.6;
         }
-        a {
-            color: #ff3333;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s, background-color 0.3s;
+        a.button {
+            background-color: #ff0033;
+            color: #fff;
             padding: 12px 20px;
-            border: 2px solid #ff3333;
             border-radius: 8px;
             display: inline-block;
+            text-decoration: none;
             margin-top: 20px;
+            transition: background-color 0.3s;
         }
-        a:hover {
-            color: #fff;
-            background-color: #ff3333;
+        a.button:hover {
+            background-color: #ffcc00;
         }
         footer {
             background-color: rgba(0, 0, 0, 0.8);
             color: #fff;
             text-align: center;
             padding: 15px;
+            position: relative;
         }
     </style>
 </head>
@@ -107,27 +100,30 @@
         <div class="nav-buttons">
             <a href="index.html">Home</a>
             <a href="discord.html">Discord</a>
-            <a href="games.html">Games</a>
+            <a href="about.html">About Us</a>
         </div>
     </header>
-    
+
     <div class="container">
         <h1>Welcome to WebWarp Gaming</h1>
-        <p>Explore the exciting world of online gaming! From tactical shooters to competitive multiplayer games, we cover a wide range of titles to keep you engaged.</p>
+        <p>Your hub for exploring and enjoying exciting games like <strong>kirka.io</strong>, <strong>kour.io</strong>, <strong>krunker.io</strong>, <strong>1v1.lol</strong>, <strong>narrow.one</strong>, and <strong>ship3d</strong>.</p>
         
-        <h2>Featured Games:</h2>
+        <h2>🎮 Explore Our Games:</h2>
         <ul>
-            <li>🚀 <strong>Kirka.io:</strong> A fast-paced arena shooter.</li>
-            <li>⚔️ <strong>Kour.io:</strong> Engage in epic battles with friends.</li>
-            <li>🎯 <strong>Krunker.io:</strong> A classic first-person shooter experience.</li>
-            <li>🛡️ <strong>1v1.lol:</strong> Test your skills in 1v1 battles.</li>
-            <li>🏹 <strong>Narrow.one:</strong> A unique archery battle game.</li>
-            <li>🚢 <strong>Ship3D:</strong> Experience naval combat like never before!</li>
+            <li><strong>kirka.io:</strong> A thrilling multiplayer shooter with unique mechanics.</li>
+            <li><strong>kour.io:</strong> Test your skills in this fast-paced arena battle.</li>
+            <li><strong>krunker.io:</strong> A classic FPS game loved by millions.</li>
+            <li><strong>1v1.lol:</strong> Engage in epic one-on-one battles.</li>
+            <li><strong>narrow.one:</strong> A tactical game that tests your strategy.</li>
+            <li><strong>ship3d:</strong> Explore vast spaces and fight battles.</li>
         </ul>
 
-        <p>Join us on this gaming adventure and discover your new favorite games!</p>
+        <h2>🤝 Join Our Community:</h2>
+        <p>Connect with fellow gamers, share strategies, and participate in community events to enhance your gaming experience.</p>
+
+        <a href="discord.html" class="button">Join Our Discord</a>
     </div>
-    
+
     <footer>
         <p>&copy; 2024 WebWarp Gaming</p>
     </footer>
