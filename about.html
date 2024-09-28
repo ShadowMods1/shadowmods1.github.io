@@ -3,69 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WebWarp Gaming - About</title>
+    <title>About - WebWarp Gaming</title>
     <link rel="icon" href="https://i.postimg.cc/DyQKQjpR/Tailor-Brands-Real-People-Creating-Real-Businesses-removebg-preview.png" type="image/x-icon">
     <style>
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #1e1e1e;
-            color: #e0e0e0;
+            background: linear-gradient(135deg, #ff0033, #3300ff);
+            color: #ffffff;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
             overflow-x: hidden;
         }
         header {
-            background: linear-gradient(135deg, #6200ea, #3700b3);
+            background: rgba(0, 0, 0, 0.7);
             color: #fff;
             padding: 20px;
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 20px 40px;
+            border-bottom: 2px solid #ffffff;
         }
         .logo {
             width: 120px;
         }
+        .nav-buttons {
+            display: flex;
+            gap: 20px;
+        }
         .nav-buttons a {
-            color: #fff;
+            color: #ffffff;
             text-decoration: none;
             font-weight: bold;
             font-size: 18px;
-            margin-left: 15px;
             transition: color 0.3s;
+            padding: 10px 15px;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.2);
         }
         .nav-buttons a:hover {
-            color: #bb86fc;
+            background: rgba(255, 255, 255, 0.4);
         }
         .container {
             max-width: 900px;
             margin: 40px auto;
             padding: 30px;
-            background: #292929;
+            background: rgba(0, 0, 0, 0.8);
             border-radius: 12px;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
             flex: 1;
         }
         h1 {
-            color: #bb86fc;
-            font-size: 32px;
+            color: #ffcc00;
+            font-size: 36px;
+            font-weight: 700;
             margin-bottom: 20px;
+            text-align: center;
+        }
+        h2 {
+            color: #ffcc00;
+            font-size: 30px;
+            font-weight: 600;
+            margin-bottom: 15px;
         }
         p {
             font-size: 18px;
             line-height: 1.6;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
         footer {
-            background-color: #3700b3;
-            color: #fff;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #ffffff;
             text-align: center;
             padding: 15px;
             position: fixed;
             bottom: 0;
             width: 100%;
+            display: none;
+            z-index: 1000;
+            transition: opacity 0.3s ease;
+        }
+        .show-footer {
+            display: block;
+            opacity: 1;
+        }
+        .hide-footer {
+            opacity: 0;
         }
     </style>
 </head>
@@ -82,17 +114,33 @@
     
     <div class="container">
         <h1>About WebWarp Gaming</h1>
-        <p>WebWarp Gaming is dedicated to providing a platform for gamers to connect, play, and share experiences. We believe in the power of gaming to bring people together, and our mission is to create a welcoming community for players of all backgrounds.</p>
-
-        <h2>🌟 Our Vision</h2>
-        <p>We strive to be a hub for gamers, offering resources, tips, and a space to engage with others who share a passion for gaming. Whether you’re a casual player or a competitive gamer, you’ll find a home here.</p>
-
-        <h2>🚀 Join Us!</h2>
-        <p>Get involved, join our community, and discover the amazing world of gaming with WebWarp Gaming!</p>
+        <p>WebWarp Gaming is dedicated to providing an engaging and inclusive gaming experience for players of all levels. Our community is built on collaboration, competition, and fun.</p>
+        
+        <h2>🌟 Our Mission:</h2>
+        <p>To create a welcoming environment where gamers can connect, compete, and share their love for gaming.</p>
+        
+        <h2>👾 Join Us:</h2>
+        <p>Whether you're a casual player or a competitive gamer, we invite you to join our community! Connect with us on <a href="https://discord.gg/FnGse6AvNR" target="_blank">Discord</a> to stay updated!</p>
     </div>
     
-    <footer>
+    <footer id="footer" class="hide-footer">
         <p>&copy; 2024 WebWarp Gaming</p>
     </footer>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            var footer = document.getElementById('footer');
+            var scrollPosition = window.innerHeight + window.scrollY;
+            var bodyHeight = document.body.scrollHeight;
+
+            if (scrollPosition >= bodyHeight - 1) {
+                footer.classList.add('show-footer');
+                footer.classList.remove('hide-footer');
+            } else {
+                footer.classList.remove('show-footer');
+                footer.classList.add('hide-footer');
+            }
+        });
+    </script>
 </body>
 </html>
