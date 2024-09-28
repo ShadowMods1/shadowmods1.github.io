@@ -10,7 +10,7 @@
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #8e44ad, #3498db);
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
             color: #ffffff;
             display: flex;
             flex-direction: column;
@@ -27,6 +27,9 @@
         .logo {
             width: 120px;
         }
+        .nav-buttons {
+            position: relative;
+        }
         .nav-buttons a {
             color: #fff;
             text-decoration: none;
@@ -36,6 +39,30 @@
         }
         .nav-buttons a:hover {
             color: #ffeb3b;
+        }
+        .dropdown {
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.9);
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: #fff;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #ffeb3b;
+            color: #000;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
         }
         .container {
             max-width: 900px;
@@ -83,7 +110,17 @@
         <img src="https://i.postimg.cc/DyQKQjpR/Tailor-Brands-Real-People-Creating-Real-Businesses-removebg-preview.png" alt="Logo" class="logo">
         <nav class="nav-buttons">
             <a href="index.html">Home</a>
-            <a href="games.html">Games</a>
+            <div class="dropdown">
+                <a href="games.html">Games</a>
+                <div class="dropdown-content">
+                    <a href="#kirka">Kirka.io</a>
+                    <a href="#kour">Kour.io</a>
+                    <a href="#krunker">Krunker.io</a>
+                    <a href="#1v1">1v1.lol</a>
+                    <a href="#narrow">Narrow.one</a>
+                    <a href="#ship3d">Ship3D</a>
+                </div>
+            </div>
             <a href="discord.html">Discord</a>
         </nav>
     </header>
@@ -92,7 +129,7 @@
         <h1>Join Our Discord Community!</h1>
         <p>Connect with fellow gamers, share tips, and stay updated on the latest gaming news. Our Discord server is the perfect place to meet new friends and enhance your gaming experience.</p>
         <p>Click the link below to join:</p>
-        <a href="https://discord.gg/FnGse6AvNR" target="_blank">Join Our Discord Server</a>
+        <a href="https://discord.gg/YOUR_DISCORD_LINK" target="_blank">Join Our Discord Server</a>
     </div>
 
     <footer>
