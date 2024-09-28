@@ -3,39 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WebWarp Gaming</title>
+    <title>Home - WebWarp Gaming</title>
     <link rel="icon" href="https://i.postimg.cc/DyQKQjpR/Tailor-Brands-Real-People-Creating-Real-Businesses-removebg-preview.png" type="image/x-icon">
     <style>
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(120deg, #ff0033, #0033ff);
+            background: linear-gradient(135deg, #ff0000, #0000ff);
             color: #fff;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
+            overflow-x: hidden; 
         }
         header {
-            background: rgba(0, 0, 0, 0.8);
+            background: rgba(0, 0, 0, 0.7);
             color: #fff;
-            padding: 20px 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            padding: 20px;
+            text-align: center;
+            font-size: 32px;
+            font-weight: 700;
             position: sticky;
             top: 0;
             z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
         }
         .logo {
             width: 120px;
+        }
+        .nav-buttons {
+            display: flex;
+            gap: 15px;
         }
         .nav-buttons a {
             color: #fff;
             text-decoration: none;
             font-weight: bold;
             font-size: 18px;
-            margin: 0 15px;
             transition: color 0.3s;
         }
         .nav-buttons a:hover {
@@ -45,20 +53,22 @@
             max-width: 900px;
             margin: 40px auto;
             padding: 30px;
-            background: rgba(0, 0, 0, 0.7);
+            background: rgba(20, 20, 20, 0.9);
             border-radius: 12px;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
             flex: 1;
+            padding-bottom: 60px; 
+        }
+        h1, h2 {
+            color: #ffcc00;
         }
         h1 {
-            color: #ffcc00;
             font-size: 36px;
             margin-bottom: 20px;
             border-bottom: 2px solid #ffcc00;
             padding-bottom: 10px;
         }
         h2 {
-            color: #ffcc00;
             font-size: 28px;
             margin-bottom: 15px;
         }
@@ -67,30 +77,23 @@
             line-height: 1.6;
             margin-bottom: 30px;
         }
-        ul {
-            margin: 20px 0;
-            padding-left: 20px;
-            font-size: 18px;
-        }
-        a.button {
-            background-color: #ff0033;
-            color: #fff;
-            padding: 12px 20px;
-            border-radius: 8px;
-            display: inline-block;
-            text-decoration: none;
-            margin-top: 20px;
-            transition: background-color 0.3s;
-        }
-        a.button:hover {
-            background-color: #ffcc00;
-        }
         footer {
-            background-color: rgba(0, 0, 0, 0.8);
+            background-color: rgba(0, 0, 0, 0.7);
             color: #fff;
             text-align: center;
             padding: 15px;
-            position: relative;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            display: none; 
+            transition: opacity 0.3s ease;
+        }
+        .show-footer {
+            display: block;
+            opacity: 1;
+        }
+        .hide-footer {
+            opacity: 0;
         }
     </style>
 </head>
@@ -98,36 +101,42 @@
     <header>
         <img src="https://i.postimg.cc/DyQKQjpR/Tailor-Brands-Real-People-Creating-Real-Businesses-removebg-preview.png" alt="Logo" class="logo">
         <div class="nav-buttons">
-    <a href="index.html">Home</a>
-    <a href="games.html">Games</a>
-    <a href="discord.html">Discord</a>
-    <a href="about.html">About Us</a>
-</div>
-
+            <a href="index.html">Home</a>
+            <a href="games.html">Games</a>
+            <a href="discord.html">Discord</a>
+        </div>
     </header>
-
+    
     <div class="container">
         <h1>Welcome to WebWarp Gaming</h1>
-        <p>Your hub for exploring and enjoying exciting games like <strong>kirka.io</strong>, <strong>kour.io</strong>, <strong>krunker.io</strong>, <strong>1v1.lol</strong>, <strong>narrow.one</strong>, and <strong>ship3d</strong>.</p>
-        
-        <h2>🎮 Explore Our Games:</h2>
+        <p>Explore the exciting world of online games with us! We bring together gamers from all over to enjoy thrilling experiences and compete in various multiplayer games. Whether you are a casual player or a competitive gamer, there’s something for everyone.</p>
+        <h2>What We Offer:</h2>
         <ul>
-            <li><strong>kirka.io:</strong> A thrilling multiplayer shooter with unique mechanics.</li>
-            <li><strong>kour.io:</strong> Test your skills in this fast-paced arena battle.</li>
-            <li><strong>krunker.io:</strong> A classic FPS game loved by millions.</li>
-            <li><strong>1v1.lol:</strong> Engage in epic one-on-one battles.</li>
-            <li><strong>narrow.one:</strong> A tactical game that tests your strategy.</li>
-            <li><strong>ship3d:</strong> Explore vast spaces and fight battles.</li>
+            <li>A vibrant community of gamers.</li>
+            <li>Regular game nights and tournaments.</li>
+            <li>Exclusive game reviews and insights.</li>
+            <li>Support and resources for gamers of all skill levels.</li>
         </ul>
-
-        <h2>🤝 Join Our Community:</h2>
-        <p>Connect with fellow gamers, share strategies, and participate in community events to enhance your gaming experience.</p>
-
-        <a href="discord.html" class="button">Join Our Discord</a>
     </div>
-
-    <footer>
+    
+    <footer id="footer" class="hide-footer">
         <p>&copy; 2024 WebWarp Gaming</p>
     </footer>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            var footer = document.getElementById('footer');
+            var scrollPosition = window.innerHeight + window.scrollY;
+            var bodyHeight = document.body.scrollHeight;
+
+            if (scrollPosition >= bodyHeight - 1) {
+                footer.classList.add('show-footer');
+                footer.classList.remove('hide-footer');
+            } else {
+                footer.classList.remove('show-footer');
+                footer.classList.add('hide-footer');
+            }
+        });
+    </script>
 </body>
 </html>
