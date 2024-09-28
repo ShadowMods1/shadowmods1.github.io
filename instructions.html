@@ -3,22 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - WebWarp Gaming</title>
+    <title>Welcome to WebWarp Gaming</title>
     <link rel="icon" href="https://i.postimg.cc/DyQKQjpR/Tailor-Brands-Real-People-Creating-Real-Businesses-removebg-preview.png" type="image/x-icon">
     <style>
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #0a0a0a; /* Dark background */
-            color: #ffffff; /* Light text color */
+            background-color: #1e1e2f; /* Dark navy background */
+            color: #f0f0f0; /* Light gray text */
             display: flex;
             flex-direction: column;
             min-height: 100vh;
-            line-height: 1.6;
+            overflow-x: hidden; /* Prevent horizontal scroll */
         }
         header {
-            background: linear-gradient(90deg, #6a0dad, #4b0082); /* Purple header */
+            background: linear-gradient(90deg, #ff4e50, #fc913a); /* Warm gradient header */
             color: #ffffff;
             padding: 20px 40px;
             text-align: center;
@@ -27,7 +27,6 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -50,7 +49,7 @@
             background: rgba(255, 255, 255, 0.1);
         }
         .nav-buttons a:hover {
-            color: #ff80ff;
+            color: #ff4e50; /* Color transition */
             background: rgba(255, 255, 255, 0.2);
         }
         .container {
@@ -60,74 +59,69 @@
             background: rgba(255, 255, 255, 0.05); /* Slightly transparent background */
             border-radius: 12px;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
-            flex: 1;
+            border: 1px solid #333;
+            flex: 1; /* Makes container grow to fill available space */
+            padding-bottom: 60px; /* Space for the footer */
         }
         h1 {
-            color: #ff80ff; /* Light purple for main heading */
-            font-size: 36px;
+            color: #ff4e50; /* Header color */
+            font-size: 32px;
             font-weight: 700;
             margin-bottom: 20px;
-            border-bottom: 2px solid #ff80ff; /* Light purple bottom border */
-            padding-bottom: 10px;
-            text-align: center;
         }
         h2 {
-            color: #ff80ff; /* Light purple for subheadings */
+            color: #fc913a; /* Subheader color */
             font-size: 28px;
             font-weight: 700;
             margin-bottom: 15px;
-            text-align: center;
         }
         p {
             font-size: 18px;
+            line-height: 1.6;
             margin-bottom: 30px;
-            text-align: justify;
         }
         ul {
             margin: 20px 0;
             padding-left: 20px;
             font-size: 18px;
             line-height: 1.6;
-            list-style-type: none;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
+            list-style-type: none; /* Remove default bullets */
         }
         ul li {
-            background: #333333; /* Background for list items */
+            background: #2e2e4d; /* Background for list items */
             border-radius: 8px;
             padding: 10px;
-            transition: transform 0.2s;
+            transition: transform 0.2s, background 0.2s;
         }
         ul li:hover {
             transform: scale(1.05);
-            background: #4b0082; /* Darker background on hover */
+            background: #3f3f6d; /* Darker background on hover */
         }
         a {
-            color: #ff80ff; /* Light purple links */
+            color: #ff4e50; /* Link color */
             text-decoration: none;
             font-weight: bold;
             transition: color 0.3s, background-color 0.3s;
             padding: 12px 20px;
-            border: 2px solid #ff80ff; /* Light purple border */
+            border: 2px solid #ff4e50; /* Border color */
             border-radius: 8px;
             display: inline-block;
             margin-top: 20px;
-            text-align: center;
         }
         a:hover {
             color: #ffffff;
-            background-color: #ff80ff; /* Light purple background on hover */
+            background-color: #ff4e50; /* Background color on hover */
         }
         footer {
-            background-color: #4b0082; /* Dark purple footer */
+            background-color: #3f3f6d; /* Footer color */
             color: #ffffff;
             text-align: center;
             padding: 15px;
             position: fixed;
             bottom: 0;
             width: 100%;
-            display: none;
+            display: none; /* Initially hidden */
+            z-index: 1000;
             transition: opacity 0.3s ease;
         }
         .show-footer {
@@ -144,35 +138,24 @@
         <img src="https://i.postimg.cc/DyQKQjpR/Tailor-Brands-Real-People-Creating-Real-Businesses-removebg-preview.png" alt="Logo" class="logo">
         <div class="nav-buttons">
             <a href="index.html">Home</a>
-            <a href="instructions.html">Instructions</a>
+            <a href="games.html">Games</a> <!-- Link to games page -->
         </div>
     </header>
     
     <div class="container">
-        <h1>Welcome to WebWarp Gaming</h1>
-        <p>Join our community dedicated to exploring and enjoying the best games available. Whether you're looking for tips, strategies, or just want to connect with fellow gamers, WebWarp Gaming is the place to be!</p>
-        
-        <h2>🎮 Featured Games:</h2>
+        <h1>Welcome to WebWarp Gaming!</h1>
+        <p>Experience a world of exciting games and features designed for gamers by gamers.</p>
+
+        <h2>Why Choose Us?</h2>
         <ul>
-            <li><a href="https://kirka.io" target="_blank">kirka.io</a></li>
-            <li><a href="https://kour.io" target="_blank">kour.io</a></li>
-            <li><a href="https://krunker.io" target="_blank">krunker.io</a></li>
-            <li><a href="https://1v1.lol" target="_blank">1v1.lol</a></li>
-            <li><a href="https://narrow.one" target="_blank">narrow.one</a></li>
-            <li><a href="https://ship3d.com" target="_blank">ship3d</a></li>
+            <li>📊 Explore a diverse collection of games!</li>
+            <li>🛠️ Find tools and scripts to enhance your gameplay!</li>
+            <li>🎮 Join a community of passionate gamers!</li>
+            <li>🌟 Stay updated with the latest gaming news and updates!</li>
         </ul>
 
-        <h2>🤝 Join Us:</h2>
-        <p>Become part of a vibrant community where your gaming skills can shine. Share your experiences, learn from others, and stay engaged with the latest gaming trends.</p>
-
-        <h2>🔒 Why Choose Us:</h2>
-        <ul>
-            <li>Friendly Environment: Connect with fellow gamers who share your passion for gaming.</li>
-            <li>Regular Updates: Stay informed with the latest gaming news and trends.</li>
-            <li>Community Events: Participate in events, tournaments, and discussions.</li>
-        </ul>
-
-        <p>Join <a href="https://discord.gg/FnGse6AvNR" class="discord-link" target="_blank">WebWarp Gaming</a> today and level up your gaming experience!</p>
+        <h2>Get Started</h2>
+        <p>Visit our <a href="games.html">Games</a> page to explore our collection!</p>
     </div>
     
     <footer id="footer" class="hide-footer">
@@ -183,9 +166,9 @@
         window.addEventListener('scroll', function() {
             var footer = document.getElementById('footer');
             var scrollPosition = window.innerHeight + window.scrollY;
-            var bodyHeight = document.body.offsetHeight;
+            var bodyHeight = document.body.scrollHeight;
 
-            if (scrollPosition >= bodyHeight) {
+            if (scrollPosition >= bodyHeight - 1) { // Check if user is close to the bottom
                 footer.classList.add('show-footer');
                 footer.classList.remove('hide-footer');
             } else {
