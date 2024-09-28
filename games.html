@@ -3,30 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Getting Started - WebWarp Gaming</title>
+    <title>WebWarp Gaming - Games</title>
     <link rel="icon" href="https://i.postimg.cc/DyQKQjpR/Tailor-Brands-Real-People-Creating-Real-Businesses-removebg-preview.png" type="image/x-icon">
     <style>
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #1e1e2f; /* Dark navy background */
-            color: #f0f0f0; /* Light gray text */
+            background-color: #1e1e1e;
+            color: #e0e0e0;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
-            overflow-x: hidden; /* Prevent horizontal scroll */
+            overflow-x: hidden;
         }
         header {
-            background: linear-gradient(90deg, #ff4e50, #fc913a); /* Warm gradient header */
-            color: #ffffff;
-            padding: 20px 40px;
-            text-align: center;
-            font-size: 32px;
-            font-weight: 700;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+            background: linear-gradient(135deg, #6200ea, #3700b3);
+            color: #fff;
+            padding: 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -34,87 +28,65 @@
         .logo {
             width: 120px;
         }
-        .nav-buttons {
-            display: flex;
-            gap: 15px;
-        }
         .nav-buttons a {
-            color: #ffffff;
+            color: #fff;
             text-decoration: none;
             font-weight: bold;
             font-size: 18px;
+            margin-left: 15px;
             transition: color 0.3s;
-            padding: 10px 15px;
-            border-radius: 5px;
-            background: rgba(255, 255, 255, 0.1);
         }
         .nav-buttons a:hover {
-            color: #ff4e50; /* Color transition */
-            background: rgba(255, 255, 255, 0.2);
+            color: #bb86fc;
         }
         .container {
             max-width: 900px;
             margin: 40px auto;
             padding: 30px;
-            background: rgba(255, 255, 255, 0.05); /* Slightly transparent background */
+            background: #292929;
             border-radius: 12px;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
-            border: 1px solid #333;
-            flex: 1; /* Makes container grow to fill available space */
-            padding-bottom: 60px; /* Space for the footer */
+            flex: 1;
         }
         h1 {
-            color: #ff4e50; /* Header color */
+            color: #bb86fc;
             font-size: 32px;
-            font-weight: 700;
             margin-bottom: 20px;
         }
         h2 {
-            color: #fc913a; /* Subheader color */
+            color: #bb86fc;
             font-size: 28px;
-            font-weight: 700;
             margin-bottom: 15px;
         }
-        p {
+        p, ul {
             font-size: 18px;
             line-height: 1.6;
             margin-bottom: 30px;
+            color: #e0e0e0;
         }
-        ul {
-            margin: 20px 0;
-            padding-left: 20px;
-            font-size: 18px;
-            line-height: 1.6;
-            list-style-type: none; /* Remove default bullets */
-        }
-        ul li {
-            background: #2e2e4d; /* Background for list items */
+        a {
+            color: #bb86fc;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+            padding: 12px 20px;
+            border: 2px solid #bb86fc;
             border-radius: 8px;
-            padding: 10px;
-            transition: transform 0.2s, background 0.2s;
+            display: inline-block;
+            margin-top: 20px;
         }
-        ul li:hover {
-            transform: scale(1.05);
-            background: #3f3f6d; /* Darker background on hover */
+        a:hover {
+            background-color: #bb86fc;
+            color: #fff;
         }
         footer {
-            background-color: #3f3f6d; /* Footer color */
-            color: #ffffff;
+            background-color: #3700b3;
+            color: #fff;
             text-align: center;
             padding: 15px;
             position: fixed;
             bottom: 0;
             width: 100%;
-            display: none; /* Initially hidden */
-            z-index: 1000;
-            transition: opacity 0.3s ease;
-        }
-        .show-footer {
-            display: block;
-            opacity: 1;
-        }
-        .hide-footer {
-            opacity: 0;
         }
     </style>
 </head>
@@ -123,43 +95,31 @@
         <img src="https://i.postimg.cc/DyQKQjpR/Tailor-Brands-Real-People-Creating-Real-Businesses-removebg-preview.png" alt="Logo" class="logo">
         <div class="nav-buttons">
             <a href="index.html">Home</a>
-            <a href="games.html">Games</a> <!-- Link to games page -->
+            <a href="games.html">Games</a>
+            <a href="discord.html">Discord</a>
+            <a href="about.html">About</a>
         </div>
     </header>
     
     <div class="container">
-        <h1>Getting Started with WebWarp Gaming</h1>
-        <p>Welcome to your ultimate gaming resource! Here's how to make the most of your experience:</p>
-
-        <h2>What You Can Do</h2>
+        <h1>Explore Our Favorite Games!</h1>
+        <p>At WebWarp Gaming, we celebrate a variety of engaging online games. Below are some of our favorites, complete with descriptions and links to play.</p>
+        
+        <h2>🎮 Game List:</h2>
         <ul>
-            <li>💻 Access tools and scripts for popular games.</li>
-            <li>🔍 Search for tutorials on how to improve your gameplay.</li>
-            <li>🛠️ Customize your gaming experience with our recommendations.</li>
+            <li><strong><a href="https://kirka.io" target="_blank">Kirka.io</a>:</strong> A dynamic battle royale game with customizable characters.</li>
+            <li><strong><a href="https://kour.io" target="_blank">Kour.io</a>:</strong> Engage in fast-paced shooting and strategy.</li>
+            <li><strong><a href="https://krunker.io" target="_blank">Krunker.io</a>:</strong> A classic FPS game with multiple maps and modes.</li>
+            <li><strong><a href="https://1v1.lol" target="_blank">1v1.lol</a>:</strong> Compete against players in intense 1v1 battles.</li>
+            <li><strong><a href="https://narrow.one" target="_blank">Narrow.one</a>:</strong> Discover an exciting world of strategic gameplay.</li>
+            <li><strong><a href="https://ship3d.com" target="_blank">Ship3D</a>:</strong> Explore 3D environments and challenges.</li>
         </ul>
-
-        <h2>Contact Us</h2>
-        <p>If you have any questions or suggestions, feel free to reach out!</p>
+        
+        <p>Stay tuned for updates on new games and features!</p>
     </div>
     
-    <footer id="footer" class="hide-footer">
+    <footer>
         <p>&copy; 2024 WebWarp Gaming</p>
     </footer>
-
-    <script>
-        window.addEventListener('scroll', function() {
-            var footer = document.getElementById('footer');
-            var scrollPosition = window.innerHeight + window.scrollY;
-            var bodyHeight = document.body.scrollHeight;
-
-            if (scrollPosition >= bodyHeight - 1) { // Check if user is close to the bottom
-                footer.classList.add('show-footer');
-                footer.classList.remove('hide-footer');
-            } else {
-                footer.classList.remove('show-footer');
-                footer.classList.add('hide-footer');
-            }
-        });
-    </script>
 </body>
 </html>
