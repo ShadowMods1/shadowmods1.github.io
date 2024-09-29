@@ -3,133 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Games - WebWarp Gaming</title>
+    <title>Kirka.io - WebWarp Gaming</title>
     <link rel="icon" href="https://i.postimg.cc/DyQKQjpR/Tailor-Brands-Real-People-Creating-Real-Businesses-removebg-preview.png" type="image/x-icon">
     <style>
-        body {
-            font-family: 'Roboto', sans-serif;
+        body, html {
             margin: 0;
             padding: 0;
+            height: 100%;
+            overflow: hidden;
+            font-family: 'Roboto', sans-serif;
             background-color: #000;
-            color: #fff;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
         }
-        header {
-            background: linear-gradient(90deg, #ff0000, #0000ff);
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-            font-size: 32px;
-            font-weight: 700;
+        .game-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            z-index: 1;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .menu-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            background: linear-gradient(90deg, #ff3333, #0033ff);
+            color: white;
+            padding: 15px 20px;
+            z-index: 2;
+            display: none; /* Menu hidden initially */
         }
-        .logo {
-            width: 120px;
-        }
-        nav {
-            position: relative;
-        }
-        .nav-buttons {
-            display: flex;
-            gap: 15px;
-        }
-        .nav-buttons a {
-            color: #fff;
+        .menu-bar a {
+            color: white;
             text-decoration: none;
+            margin: 0 15px;
             font-weight: bold;
-            font-size: 18px;
-            transition: color 0.3s;
         }
-        .nav-buttons a:hover {
-            color: #ff3333;
+        .menu-bar a:hover {
+            color: #0033ff;
         }
-        /* Dropdown menu */
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #333;
-            min-width: 160px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            z-index: 1;
-        }
-        .dropdown-content a {
-            color: #fff;
-            padding: 12px 16px;
-            text-decoration: none;
+        .show-menu {
             display: block;
         }
-        .dropdown-content a:hover {
-            background-color: #575757;
-        }
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-        .container {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 30px;
-            background: #111;
-            border-radius: 12px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
-            border: 1px solid #333;
-            flex: 1; /* Makes container grow to fill available space */
-        }
-        h1 {
-            color: #ff3333;
-            font-size: 32px;
-            font-weight: 700;
-            margin-bottom: 20px;
-            border-bottom: 2px solid #ff3333;
-            padding-bottom: 10px;
-        }
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 15px;
+        #menu-toggle {
             position: fixed;
-            bottom: 0;
-            width: 100%;
+            top: 20px;
+            right: 20px;
+            background-color: #0033ff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            z-index: 3;
         }
     </style>
 </head>
 <body>
-    <header>
-        <img src="https://i.postimg.cc/DyQKQjpR/Tailor-Brands-Real-People-Creating-Real-Businesses-removebg-preview.png" alt="Logo" class="logo">
-        <nav>
-            <div class="nav-buttons">
-                <a href="index.html">Home</a>
-                <div class="dropdown">
-                    <a href="#">Games</a>
-                    <div class="dropdown-content">
-                        <a href="games.html">Kirka.io</a>
-                        <a href="krunker.html">Krunker.io</a>
-                        <a href="1v1lol.html">1v1.lol</a>
-                        <a href="narrowone.html">Narrow.One</a>
-                        <a href="ship3d.html">Ship3D</a>
-                        <a href="kour.html">Kour.io</a>
-                    </div>
-                </div>
-                <a href="discord.html">Discord</a>
-            </div>
-        </nav>
-    </header>
-    
-    <div class="container">
-        <h1>Welcome to WebWarp Gaming - Games</h1>
-        <p>Select a game from the dropdown menu to start playing in fullscreen mode!</p>
+
+    <div class="menu-bar" id="menu-bar">
+        <a href="games.html">Kirka.io</a>
+        <a href="kour.html">Kour.io</a>
+        <a href="krunker.html">Krunker.io</a>
+        <a href="1v1.html">1v1.lol</a>
+        <a href="narrow.html">Narrow.one</a>
+        <a href="ship3d.html">Ship3D</a>
     </div>
-    
-    <footer>
-        <p>&copy; 2024 WebWarp Gaming</p>
-    </footer>
+
+    <div class="game-container">
+        <iframe src="https://kirka.io" title="Kirka.io"></iframe>
+    </div>
+
+    <!-- Toggle button to show the navigation -->
+    <button id="menu-toggle">Menu</button>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const menuBar = document.getElementById('menu-bar');
+
+        // Toggle menu visibility on button click
+        menuToggle.addEventListener('click', function() {
+            if (menuBar.classList.contains('show-menu')) {
+                menuBar.classList.remove('show-menu');
+            } else {
+                menuBar.classList.add('show-menu');
+            }
+        });
+    </script>
+
 </body>
 </html>
