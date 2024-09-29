@@ -33,29 +33,22 @@
             display: flex;
             gap: 20px;
         }
-        .nav-buttons a {
+        .nav-buttons a, .dropbtn {
             color: #fff;
             text-decoration: none;
             font-weight: bold;
             padding: 10px 15px;
             border-radius: 5px;
             transition: background-color 0.3s, color 0.3s;
+            cursor: pointer; /* Makes it look clickable */
         }
-        .nav-buttons a:hover {
+        .nav-buttons a:hover, .dropbtn:hover {
             background-color: rgba(255, 255, 255, 0.2);
             color: #ffcc00;
         }
         .dropdown {
             position: relative;
             display: inline-block;
-        }
-        .dropbtn {
-            background-color: transparent;
-            color: #fff;
-            padding: 10px 15px;
-            border: none;
-            font-weight: bold;
-            cursor: pointer;
         }
         .dropdown-content {
             display: none;
@@ -124,7 +117,7 @@
         <div class="nav-buttons">
             <a href="index.html">Home</a>
             <div class="dropdown">
-                <span><strong>Games</strong></span>
+                <button class="dropbtn"><strong>Games</strong></button>
                 <div class="dropdown-content">
                     <a href="games.html">Kirka.io</a>
                     <a href="kour.html">Kour.io</a>
