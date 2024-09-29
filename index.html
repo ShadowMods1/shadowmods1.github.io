@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WebWarp Gaming - Home</title>
     <link rel="icon" href="https://i.postimg.cc/0200J68W/file.png" type="image/x-icon">
+    
+    <!-- FontAwesome for Discord and YouTube icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -70,6 +74,18 @@
         .dropdown-content a:hover {
             background-color: #ff3333;
         }
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+        .social-icons a {
+            color: #fff;
+            font-size: 24px;
+            text-decoration: none;
+        }
+        .social-icons a:hover {
+            color: #ff3333;
+        }
         .container {
             max-width: 900px;
             margin: 40px auto;
@@ -99,20 +115,6 @@
             line-height: 1.6;
             margin-bottom: 30px;
         }
-        a.button {
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-            padding: 12px 20px;
-            background-color: #ff3333;
-            border-radius: 8px;
-            display: inline-block;
-            margin-top: 20px;
-            transition: background-color 0.3s;
-        }
-        a.button:hover {
-            background-color: #cc0000;
-        }
         footer {
             background-color: #003e6b;
             color: #fff;
@@ -141,7 +143,10 @@
                     <a href="ship3d.html">Ship3D</a>
                 </div>
             </div>
-            <a href="discord.html" class="button">Join Discord</a>
+        </div>
+        <div class="social-icons">
+            <a href="https://discord.gg/FnGse6AvNR" target="_blank"><i class="fa-brands fa-discord"></i></a>
+            <a href="https://www.youtube.com/@WebWarpGaming" target="_blank"><i class="fa-brands fa-youtube"></i></a>
         </div>
     </header>
     
