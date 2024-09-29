@@ -32,6 +32,7 @@
         .nav-buttons {
             display: flex;
             gap: 20px;
+            align-items: center; /* Aligns items vertically in the center */
         }
         .nav-buttons a {
             color: #fff;
@@ -54,8 +55,8 @@
             color: #fff;
             padding: 10px 15px;
             border: none;
-            font-weight: bold; /* Ensures "Games" is bold */
             cursor: default; /* Cursor is default for label */
+            font-weight: bold; /* Keeps "Games" bold */
         }
         .dropdown-content {
             display: none;
@@ -124,7 +125,7 @@
         <div class="nav-buttons">
             <a href="index.html">Home</a>
             <div class="dropdown">
-                <span class="dropbtn" style="font-weight: bold;">Games</span>
+                <span class="dropbtn">Games</span> <!-- Keeps "Games" bold -->
                 <div class="dropdown-content">
                     <a href="games.html">Kirka.io</a>
                     <a href="kour.html">Kour.io</a>
