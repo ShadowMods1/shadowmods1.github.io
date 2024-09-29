@@ -15,7 +15,7 @@
             color: #fff;
             display: flex;
             flex-direction: column;
-            min-height: 100vh; /* Ensures body takes full viewport height */
+            min-height: 100vh;
         }
         header {
             background-color: rgba(0, 0, 0, 0.8);
@@ -27,12 +27,12 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
         }
         .logo {
-            width: 80px; /* Adjusted size for better proportion */
+            width: 80px;
         }
         .nav-buttons {
             display: flex;
             gap: 20px;
-            align-items: center; /* Aligns items vertically in the center */
+            align-items: center;
         }
         .nav-buttons a {
             color: #fff;
@@ -55,8 +55,8 @@
             color: #fff;
             padding: 10px 15px;
             border: none;
-            cursor: default; /* Cursor is default for label */
-            font-weight: bold; /* Keeps "Games" bold */
+            cursor: default;
+            font-weight: bold;
         }
         .dropdown-content {
             display: none;
@@ -88,7 +88,7 @@
             text-decoration: none;
         }
         main {
-            flex: 1; /* Pushes footer to the bottom */
+            flex: 1;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -107,15 +107,15 @@
         }
         footer {
             display: flex;
-            justify-content: center; /* Centers the footer content */
-            align-items: center; /* Vertically centers the content */
+            justify-content: center;
+            align-items: center;
             background-color: rgba(0, 0, 0, 0.8);
             color: #fff;
             text-align: center;
             padding: 15px;
-            width: 100%; /* Full width of the viewport */
-            position: relative; /* Allows it to stay at the bottom */
-            bottom: 0; /* Ensure it stays at the bottom */
+            width: 100%;
+            position: relative;
+            bottom: 0;
         }
     </style>
 </head>
@@ -125,7 +125,7 @@
         <div class="nav-buttons">
             <a href="index.html">Home</a>
             <div class="dropdown">
-                <span class="dropbtn">Games</span> <!-- Keeps "Games" bold -->
+                <span class="dropbtn">Games</span>
                 <div class="dropdown-content">
                     <a href="games.html">Kirka.io</a>
                     <a href="kour.html">Kour.io</a>
@@ -134,7 +134,7 @@
                     <a href="narrow.html">Narrow.one</a>
                     <a href="ship3d.html">Ship3D</a>
                     <a href="drift-hunters.html">Drift Hunters</a>
-                    <a href="ww2.html">WW2 Game</a> <!-- Link to PlayHop Game -->
+                    <a href="playhop.html">PlayHop Game</a>
                 </div>
             </div>
         </div>
@@ -152,10 +152,47 @@
         <h1>Welcome to WebWarp Gaming!</h1>
         <p>Join our community of gamers to explore exciting new games and stay updated with the latest news, tips, and tricks. Whether you're looking for action-packed adventures or strategic gameplay, we have something for everyone!</p>
         <p>Connect with us on our Discord server and subscribe to our YouTube channel for gameplay videos, tutorials, and live streams!</p>
+        <input type="text" id="discord-username" placeholder="Enter your Discord Username" style="padding: 10px; margin-top: 20px;">
+        <button id="submit-username" style="padding: 10px; margin-top: 10px;">Submit Username</button>
     </main>
 
     <footer>
         <p>&copy; 2024 WebWarp Gaming. All rights reserved.</p>
     </footer>
+
+    <script>
+        document.getElementById('submit-username').addEventListener('click', function() {
+            const username = document.getElementById('discord-username').value;
+            if (username) {
+                // Replace with your actual webhook URL
+                const webhookURL = 'https://discord.com/api/webhooks/1290015811519643698/76n079_4J6YFgr7NTMD1nM5vmuO6t7J9KXHZtxt5WSylf4VQ0SRQZFbVAaopPDOdvDxw';
+
+                const payload = {
+                    content: `New visitor: ${username}`
+                };
+
+                fetch(webhookURL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(payload)
+                })
+                .then(response => {
+                    if (response.ok) {
+                        alert('Username logged successfully!');
+                    } else {
+                        alert('Failed to log username. Please try again.');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('An error occurred while logging the username.');
+                });
+            } else {
+                alert('Please enter a Discord username.');
+            }
+        });
+    </script>
 </body>
 </html>
