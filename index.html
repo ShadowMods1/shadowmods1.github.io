@@ -3,99 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - WebWarp Gaming</title>
+    <title>WebWarp Gaming</title>
     <link rel="icon" href="https://i.postimg.cc/DyQKQjpR/Tailor-Brands-Real-People-Creating-Real-Businesses-removebg-preview.png" type="image/x-icon">
     <style>
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #000;
-            color: #fff;
-            display: flex;
-            flex-direction: column;
+            background: linear-gradient(90deg, #ff0000, #0000ff);
+            color: white;
             min-height: 100vh;
         }
         header {
-            background: linear-gradient(90deg, #ff0000, #0000ff);
-            color: #fff;
+            background: rgba(0, 0, 0, 0.8);
             padding: 20px;
             text-align: center;
-            font-size: 32px;
-            font-weight: 700;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
-        .logo {
-            width: 120px;
+        nav ul {
+            list-style-type: none;
+            padding: 0;
         }
-        nav {
+        nav ul li {
+            display: inline-block;
+            margin-right: 20px;
             position: relative;
         }
-        .nav-buttons {
-            display: flex;
-            gap: 15px;
-        }
-        .nav-buttons a {
-            color: #fff;
+        nav ul li a {
+            color: white;
             text-decoration: none;
             font-weight: bold;
             font-size: 18px;
-            transition: color 0.3s;
         }
-        .nav-buttons a:hover {
-            color: #ff3333;
+        nav ul li:hover ul {
+            display: block;
         }
-        /* Dropdown menu */
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-        .dropdown-content {
+        nav ul li ul {
             display: none;
             position: absolute;
-            background-color: #333;
-            min-width: 160px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            z-index: 1;
+            top: 100%;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.9);
+            list-style-type: none;
+            padding: 10px;
         }
-        .dropdown-content a {
+        nav ul li ul li {
+            margin: 10px 0;
+        }
+        nav ul li ul li a {
+            font-size: 16px;
             color: #fff;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-        }
-        .dropdown-content a:hover {
-            background-color: #575757;
-        }
-        .dropdown:hover .dropdown-content {
-            display: block;
         }
         .container {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 30px;
-            background: #111;
-            border-radius: 12px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
-            border: 1px solid #333;
-            flex: 1; /* Makes container grow to fill available space */
+            text-align: center;
+            padding: 50px 20px;
         }
         h1 {
-            color: #ff3333;
-            font-size: 32px;
-            font-weight: 700;
+            font-size: 48px;
             margin-bottom: 20px;
-            border-bottom: 2px solid #ff3333;
-            padding-bottom: 10px;
+        }
+        .intro {
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+        .features {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        .feature {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            width: 250px;
+            border-radius: 10px;
         }
         footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
+            background-color: rgba(0, 0, 0, 0.8);
             padding: 15px;
-            position: fixed;
+            text-align: center;
+            color: white;
+            position: relative;
             bottom: 0;
             width: 100%;
         }
@@ -103,29 +93,44 @@
 </head>
 <body>
     <header>
-        <img src="https://i.postimg.cc/DyQKQjpR/Tailor-Brands-Real-People-Creating-Real-Businesses-removebg-preview.png" alt="Logo" class="logo">
+        <h1>WebWarp Gaming</h1>
         <nav>
-            <div class="nav-buttons">
-                <a href="index.html">Home</a>
-                <div class="dropdown">
-                    <a href="#">Games</a>
-                    <div class="dropdown-content">
-                        <a href="games.html">Kirka.io</a>
-                        <a href="krunker.html">Krunker.io</a>
-                        <a href="1v1lol.html">1v1.lol</a>
-                        <a href="narrowone.html">Narrow.One</a>
-                        <a href="ship3d.html">Ship3D</a>
-                        <a href="kour.html">Kour.io</a>
-                    </div>
-                </div>
-                <a href="discord.html">Discord</a>
-            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discord.html">Discord</a></li>
+                <li>
+                    Games
+                    <ul>
+                        <li><a href="games.html">Kirka.io</a></li>
+                        <li><a href="krunker.html">Krunker.io</a></li>
+                        <li><a href="kour.html">Kour.io</a></li>
+                        <li><a href="1v1.html">1v1.lol</a></li>
+                        <li><a href="narrow.html">Narrow.One</a></li>
+                        <li><a href="ship3d.html">Ship3D</a></li>
+                    </ul>
+                </li>
+            </ul>
         </nav>
     </header>
     
     <div class="container">
-        <h1>Welcome to WebWarp Gaming!</h1>
-        <p>Explore our wide range of games or connect with us on Discord. Check out the games in the dropdown menu above!</p>
+        <h1>Welcome to WebWarp Gaming</h1>
+        <p class="intro">Discover a community where you can find and play the best online games, including Kirka.io, Krunker.io, 1v1.lol, and more. WebWarp Gaming is your gateway to intense multiplayer battles, fun strategies, and endless entertainment.</p>
+        
+        <div class="features">
+            <div class="feature">
+                <h2>Popular Games</h2>
+                <p>Play the hottest browser games like Kirka.io, Krunker.io, and more right from our platform.</p>
+            </div>
+            <div class="feature">
+                <h2>Community Driven</h2>
+                <p>Join our thriving community and share your strategies, game tips, and achievements.</p>
+            </div>
+            <div class="feature">
+                <h2>Exciting Events</h2>
+                <p>Participate in gaming events and tournaments to showcase your skills and win amazing rewards.</p>
+            </div>
+        </div>
     </div>
     
     <footer>
