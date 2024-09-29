@@ -14,7 +14,7 @@
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(90deg, #000428, #004e92);
+            background: linear-gradient(90deg, #ff0000, #004e92); /* Red to blue gradient */
             color: #fff;
             display: flex;
             flex-direction: column;
@@ -22,7 +22,7 @@
             overflow-x: hidden;
         }
         header {
-            background: #003e6b;
+            background: linear-gradient(90deg, #ff3333, #003e6b); /* Red to blue gradient */
             color: #fff;
             padding: 20px 40px;
             display: flex;
@@ -33,7 +33,7 @@
             z-index: 1000;
         }
         .logo {
-            width: 100px; /* Adjusted size */
+            width: 80px; /* Smaller, professional logo size */
         }
         .nav-buttons {
             display: flex;
@@ -47,7 +47,7 @@
             transition: color 0.3s;
         }
         .nav-buttons a:hover {
-            color: #ff3333;
+            color: #ffcc00;
         }
         .dropdown {
             position: relative;
@@ -84,7 +84,7 @@
             text-decoration: none;
         }
         .social-icons a:hover {
-            color: #ff3333;
+            color: #ffcc00;
         }
         .container {
             max-width: 900px;
@@ -133,7 +133,7 @@
         <div class="nav-buttons">
             <a href="index.html">Home</a>
             <div class="dropdown">
-                <a href="#">Games</a>
+                <span style="font-weight: bold;">Games</span>
                 <div class="dropdown-content">
                     <a href="games.html">Kirka.io</a>
                     <a href="kour.html">Kour.io</a>
@@ -146,7 +146,7 @@
         </div>
         <div class="social-icons">
             <a href="https://discord.gg/FnGse6AvNR" target="_blank"><i class="fa-brands fa-discord"></i></a>
-            <a href="https://www.youtube.com/@WebWarpGaming" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://www.youtube.com/@webwarpgaming" target="_blank"><i class="fa-brands fa-youtube"></i></a>
         </div>
     </header>
     
