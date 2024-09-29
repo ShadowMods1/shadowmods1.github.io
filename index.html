@@ -10,16 +10,19 @@
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #ff4e50, #fc3c5e);
-            color: #ffffff;
+            background-color: #000;
+            color: #fff;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
         }
         header {
-            background: rgba(0, 0, 0, 0.7);
+            background: linear-gradient(90deg, #ff0000, #0000ff);
             color: #fff;
             padding: 20px;
+            text-align: center;
+            font-size: 32px;
+            font-weight: 700;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -27,28 +30,34 @@
         .logo {
             width: 120px;
         }
-        .nav-buttons {
+        nav {
             position: relative;
+        }
+        .nav-buttons {
+            display: flex;
+            gap: 15px;
         }
         .nav-buttons a {
             color: #fff;
             text-decoration: none;
-            margin: 0 15px;
             font-weight: bold;
+            font-size: 18px;
             transition: color 0.3s;
         }
         .nav-buttons a:hover {
-            color: #ffeb3b;
+            color: #ff3333;
         }
+        /* Dropdown menu */
         .dropdown {
+            position: relative;
             display: inline-block;
         }
         .dropdown-content {
             display: none;
             position: absolute;
-            background-color: rgba(0, 0, 0, 0.9);
+            background-color: #333;
             min-width: 160px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
             z-index: 1;
         }
         .dropdown-content a {
@@ -58,8 +67,7 @@
             display: block;
         }
         .dropdown-content a:hover {
-            background-color: #ffeb3b;
-            color: #000;
+            background-color: #575757;
         }
         .dropdown:hover .dropdown-content {
             display: block;
@@ -68,25 +76,22 @@
             max-width: 900px;
             margin: 40px auto;
             padding: 30px;
-            background: rgba(0, 0, 0, 0.8);
+            background: #111;
             border-radius: 12px;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
-            flex: 1;
+            border: 1px solid #333;
+            flex: 1; /* Makes container grow to fill available space */
         }
         h1 {
+            color: #ff3333;
             font-size: 32px;
             font-weight: 700;
             margin-bottom: 20px;
-            border-bottom: 2px solid #ffeb3b;
+            border-bottom: 2px solid #ff3333;
             padding-bottom: 10px;
         }
-        p {
-            font-size: 18px;
-            line-height: 1.6;
-            margin-bottom: 30px;
-        }
         footer {
-            background-color: rgba(0, 0, 0, 0.7);
+            background-color: #333;
             color: #fff;
             text-align: center;
             padding: 15px;
@@ -99,29 +104,30 @@
 <body>
     <header>
         <img src="https://i.postimg.cc/DyQKQjpR/Tailor-Brands-Real-People-Creating-Real-Businesses-removebg-preview.png" alt="Logo" class="logo">
-        <nav class="nav-buttons">
-            <a href="index.html">Home</a>
-            <div class="dropdown">
-                <a href="games.html">Games</a>
-                <div class="dropdown-content">
-                    <a href="#kirka">Kirka.io</a>
-                    <a href="#kour">Kour.io</a>
-                    <a href="#krunker">Krunker.io</a>
-                    <a href="#1v1">1v1.LOL</a>
-                    <a href="#narrow">Narrow.one</a>
-                    <a href="#ship3d">Ship3D</a>
+        <nav>
+            <div class="nav-buttons">
+                <a href="index.html">Home</a>
+                <div class="dropdown">
+                    <a href="#">Games</a>
+                    <div class="dropdown-content">
+                        <a href="games.html">Kirka.io</a>
+                        <a href="krunker.html">Krunker.io</a>
+                        <a href="1v1lol.html">1v1.lol</a>
+                        <a href="narrowone.html">Narrow.One</a>
+                        <a href="ship3d.html">Ship3D</a>
+                        <a href="kour.html">Kour.io</a>
+                    </div>
                 </div>
+                <a href="discord.html">Discord</a>
             </div>
-            <a href="discord.html">Discord</a>
         </nav>
     </header>
-
+    
     <div class="container">
-        <h1>Welcome to WebWarp Gaming</h1>
-        <p>Your ultimate destination for all things gaming! Dive into the latest and greatest in the gaming world. Explore our curated list of games and find your new favorite.</p>
-        <p>Join our community of passionate gamers and share your experiences, strategies, and excitement for gaming!</p>
+        <h1>Welcome to WebWarp Gaming!</h1>
+        <p>Explore our wide range of games or connect with us on Discord. Check out the games in the dropdown menu above!</p>
     </div>
-
+    
     <footer>
         <p>&copy; 2024 WebWarp Gaming</p>
     </footer>
