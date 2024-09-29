@@ -196,7 +196,9 @@
 
         <div class="username-input-container">
             <h2>Share Your Discord Username!</h2>
-            <p>Please enter your Discord username below:</p>
+            <p>Welcome to WebWarp Gaming! 🎮</p>
+            <p>We’re excited to have you here! As part of our community, we’d love to get to know you better. Please share your Discord username with us so we can keep you updated on the latest games, events, and community news. Your input helps us create an even better experience for everyone!</p>
+            <p>Just type your username below and hit "Submit." We can’t wait to see you in-game!</p>
             <form id="username-form">
                 <input type="text" id="discord-username" placeholder="Your Discord Username" required>
                 <button type="submit">Submit</button>
@@ -207,5 +209,14 @@
     <footer>
         <p>&copy; 2024 WebWarp Gaming. All rights reserved.</p>
     </footer>
+
+    <script>
+        document.getElementById('username-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const username = document.getElementById('discord-username').value;
+            console.log('Discord Username submitted:', username);
+            alert(`Thank you for sharing, ${username}!`);
+        });
+    </script>
 </body>
 </html>
