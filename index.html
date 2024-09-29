@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - WebWarp Gaming</title>
+    <title>WebWarp Gaming</title>
     <link rel="icon" href="https://i.postimg.cc/DyQKQjpR/Tailor-Brands-Real-People-Creating-Real-Businesses-removebg-preview.png" type="image/x-icon">
     <style>
         body {
@@ -12,6 +12,8 @@
             padding: 0;
             background: linear-gradient(90deg, #ff0000, #0000ff);
             color: white;
+            display: flex;
+            flex-direction: column;
             min-height: 100vh;
         }
         header {
@@ -25,6 +27,7 @@
         nav ul {
             list-style-type: none;
             padding: 0;
+            margin: 0;
         }
         nav ul li {
             display: inline-block;
@@ -48,6 +51,7 @@
             background-color: rgba(0, 0, 0, 0.9);
             list-style-type: none;
             padding: 10px;
+            border-radius: 8px;
         }
         nav ul li ul li {
             margin: 10px 0;
@@ -59,6 +63,7 @@
         .container {
             text-align: center;
             padding: 50px 20px;
+            flex: 1; /* Allows the container to grow and fill the available space */
         }
         h1 {
             font-size: 48px;
@@ -86,7 +91,6 @@
             text-align: center;
             color: white;
             position: relative;
-            bottom: 0;
             width: 100%;
         }
     </style>
