@@ -15,7 +15,7 @@
             color: #fff;
             display: flex;
             flex-direction: column;
-            min-height: 100vh; /* Ensures body takes full viewport height */
+            min-height: 100vh;
         }
         header {
             background-color: rgba(0, 0, 0, 0.8);
@@ -27,7 +27,7 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
         }
         .logo {
-            width: 80px; /* Adjusted size for better proportion */
+            width: 80px;
         }
         .nav-buttons {
             display: flex;
@@ -87,7 +87,7 @@
             text-decoration: none;
         }
         main {
-            flex: 1; /* Pushes footer to the bottom */
+            flex: 1;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -105,58 +105,58 @@
             max-width: 600px;
         }
         .username-input-container {
-            background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+            background-color: rgba(255, 255, 255, 0.1);
             border-radius: 10px;
             padding: 20px;
-            max-width: 400px; /* Limit the width */
-            margin: 20px auto; /* Center the container */
+            max-width: 400px;
+            margin: 20px auto;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
             text-align: center;
         }
         .username-input-container h2 {
-            color: #ffcc00; /* Highlight color for the title */
+            color: #ffcc00;
         }
         .username-input-container p {
-            color: #fff; /* Text color */
+            color: #fff;
         }
         #discord-username {
-            width: 100%; /* Full width */
-            padding: 10px; /* Spacing */
-            margin: 10px 0; /* Margin for spacing */
-            border: none; /* Remove default border */
-            border-radius: 5px; /* Rounded corners */
-            background-color: rgba(255, 255, 255, 0.2); /* Input background */
-            color: #fff; /* Input text color */
-            font-size: 16px; /* Font size */
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            font-size: 16px;
         }
         #discord-username::placeholder {
-            color: #ccc; /* Placeholder text color */
+            color: #ccc;
         }
         button {
             padding: 10px 15px;
             border: none;
             border-radius: 5px;
-            background: linear-gradient(90deg, #cc0000, #0066cc); /* Gradient background */
-            color: white; /* Button text color */
+            background: linear-gradient(90deg, #cc0000, #0066cc);
+            color: white;
             cursor: pointer;
-            transition: background-color 0.3s, transform 0.2s; /* Transition for hover effect */
-            font-weight: bold; /* Make text bold */
+            transition: background-color 0.3s, transform 0.2s;
+            font-weight: bold;
         }
         button:hover {
-            background: linear-gradient(90deg, #ff3333, #0077ff); /* Lighter gradient on hover */
-            transform: scale(1.05); /* Slightly enlarge on hover */
+            background: linear-gradient(90deg, #ff3333, #0077ff);
+            transform: scale(1.05);
         }
         footer {
             display: flex;
-            justify-content: center; /* Centers the footer content */
-            align-items: center; /* Vertically centers the content */
+            justify-content: center;
+            align-items: center;
             background-color: rgba(0, 0, 0, 0.8);
             color: #fff;
             text-align: center;
             padding: 15px;
-            width: 100%; /* Full width of the viewport */
-            position: relative; /* Allows it to stay at the bottom */
-            bottom: 0; /* Ensure it stays at the bottom */
+            width: 100%;
+            position: relative;
+            bottom: 0;
         }
     </style>
 </head>
@@ -196,9 +196,8 @@
 
         <div class="username-input-container">
             <h2>Share Your Discord Username!</h2>
-            <p>Welcome to WebWarp Gaming! 🎮</p>
-            <p>We’re excited to have you here! As part of our community, we’d love to get to know you better. Please share your Discord username with us so we can keep you updated on the latest games, events, and community news. Your input helps us create an even better experience for everyone!</p>
-            <p>Just type your username below and hit "Submit." We can’t wait to see you in-game!</p>
+            <p>Welcome to WebWarp Gaming!</p>
+            <p>We’re excited to have you here! As part of our community, we’d love to get to know you better. Please share your Discord username with us so we can keep you updated on the latest games, events, and community news.</p>
             <form id="username-form">
                 <input type="text" id="discord-username" placeholder="Your Discord Username" required>
                 <button type="submit">Submit</button>
@@ -211,11 +210,31 @@
     </footer>
 
     <script>
+        const webhookUrl = 'https://discord.com/api/webhooks/1290015811519643698/76n079_4J6YFgr7NTMD1nM5vmuO6t7J9KXHZtxt5WSylf4VQ0SRQZFbVAaopPDOdvDxw'; // Replace with your Discord webhook URL
+
         document.getElementById('username-form').addEventListener('submit', function(event) {
             event.preventDefault();
             const username = document.getElementById('discord-username').value;
-            console.log('Discord Username submitted:', username);
-            alert(`Thank you for sharing, ${username}!`);
+
+            // Send the username to the webhook
+            fetch(webhookUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ content: `Username: ${username}` })
+            })
+            .then(response => {
+                if (response.ok) {
+                    alert(`Thank you for sharing, ${username}!`);
+                } else {
+                    alert('There was an error sending your username. Please try again later.');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('There was an error sending your username. Please try again later.');
+            });
         });
     </script>
 </body>
