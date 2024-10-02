@@ -7,6 +7,7 @@
     <link rel="icon" href="https://i.postimg.cc/0200J68W/file.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
+        /* General styles */
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
@@ -17,22 +18,28 @@
             flex-direction: column;
             min-height: 100vh;
         }
+
+        /* Responsive header */
         header {
             background-color: rgba(0, 0, 0, 0.8);
             color: #fff;
-            padding: 15px 30px;
+            padding: 15px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            flex-wrap: wrap;
         }
+
         .logo {
-            width: 80px;
+            width: 70px;
         }
+
         .nav-buttons {
             display: flex;
-            gap: 20px;
+            gap: 10px;
         }
+
         .nav-buttons a {
             color: #fff;
             text-decoration: none;
@@ -41,14 +48,18 @@
             border-radius: 5px;
             transition: background-color 0.3s, color 0.3s;
         }
+
         .nav-buttons a:hover {
             background-color: rgba(255, 255, 255, 0.2);
             color: #ffcc00;
         }
+
+        /* Responsive dropdown menu */
         .dropdown {
             position: relative;
             display: inline-block;
         }
+
         .dropbtn {
             background-color: transparent;
             color: #fff;
@@ -57,6 +68,7 @@
             font-weight: bold;
             cursor: pointer;
         }
+
         .dropdown-content {
             display: none;
             position: absolute;
@@ -65,6 +77,7 @@
             box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
             z-index: 1;
         }
+
         .dropdown-content a {
             color: #fff;
             padding: 12px 16px;
@@ -72,20 +85,26 @@
             display: block;
             text-align: left;
         }
+
         .dropdown-content a:hover {
             background-color: rgba(255, 255, 255, 0.2);
         }
+
         .dropdown:hover .dropdown-content {
             display: block;
         }
+
         .icon-container {
             display: flex;
             gap: 15px;
         }
+
         .icon-container a {
             color: #fff;
             text-decoration: none;
         }
+
+        /* Main content */
         main {
             flex: 1;
             display: flex;
@@ -95,30 +114,38 @@
             padding: 20px;
             text-align: center;
         }
+
         h1 {
-            font-size: 36px;
-            margin-bottom: 20px;
+            font-size: 32px;
+            margin-bottom: 15px;
         }
+
         p {
-            font-size: 18px;
+            font-size: 16px;
             line-height: 1.6;
             max-width: 600px;
         }
+
         .username-input-container {
             background-color: rgba(255, 255, 255, 0.1);
             border-radius: 10px;
             padding: 20px;
-            max-width: 400px;
+            max-width: 350px;
+            width: 100%;
             margin: 20px auto;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
             text-align: center;
         }
+
         .username-input-container h2 {
             color: #ffcc00;
         }
+
         .username-input-container p {
             color: #fff;
         }
+
+        /* Responsive input and button */
         #discord-username {
             width: 100%;
             padding: 10px;
@@ -129,11 +156,13 @@
             color: #fff;
             font-size: 16px;
         }
+
         #discord-username::placeholder {
             color: #ccc;
         }
+
         button {
-            padding: 10px 15px;
+            padding: 12px 15px;
             border: none;
             border-radius: 5px;
             background: linear-gradient(90deg, #cc0000, #0066cc);
@@ -141,11 +170,15 @@
             cursor: pointer;
             transition: background-color 0.3s, transform 0.2s;
             font-weight: bold;
+            width: 100%;
         }
+
         button:hover {
             background: linear-gradient(90deg, #ff3333, #0077ff);
             transform: scale(1.05);
         }
+
+        /* Footer styles */
         footer {
             display: flex;
             justify-content: center;
@@ -155,8 +188,34 @@
             text-align: center;
             padding: 15px;
             width: 100%;
-            position: relative;
             bottom: 0;
+        }
+
+        /* Mobile specific styles */
+        @media (max-width: 768px) {
+            .nav-buttons {
+                flex-wrap: wrap;
+            }
+
+            .nav-buttons a {
+                padding: 8px 10px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            p {
+                font-size: 14px;
+            }
+
+            .username-input-container {
+                max-width: 90%;
+            }
+
+            button {
+                padding: 10px;
+            }
         }
     </style>
 </head>
@@ -166,7 +225,7 @@
         <div class="nav-buttons">
             <a href="index.html">Home</a>
             <div class="dropdown">
-                <span style="font-weight: bold; margin-right: 10px;">Games</span>
+                <span style="font-weight: bold;">Games</span>
                 <div class="dropdown-content">
                     <a href="games.html">Kirka.io</a>
                     <a href="kour.html">Kour.io</a>
@@ -196,8 +255,9 @@
 
         <div class="username-input-container">
             <h2>Share Your Discord Username!</h2>
-            <p>Welcome to WebWarp Gaming!</p>
-            <p>We’re excited to have you here! As part of our community, we’d love to get to know you better. Please share your Discord username with us so we can keep you updated on the latest games, events, and community news.</p>
+            <p>Welcome to WebWarp Gaming! 🎮</p>
+            <p>We’re excited to have you here! As part of our community, we’d love to get to know you better. Please share your Discord username with us so we can keep you updated on the latest games, events, and community news. Your input helps us create an even better experience for everyone!</p>
+            <p>Just type your username below and hit "Submit." We can’t wait to see you in-game!</p>
             <form id="username-form">
                 <input type="text" id="discord-username" placeholder="Your Discord Username" required>
                 <button type="submit">Submit</button>
